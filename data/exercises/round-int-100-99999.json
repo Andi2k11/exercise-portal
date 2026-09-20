@@ -1,0 +1,15 @@
+{
+  "id": "round-int-100-99999",
+  "title": "Avrundning (heltal)",
+  "generator": "roundByDigits",
+  "params": {
+    "count": 15,
+    "min": 100,
+    "max": 99999
+  },
+  "validation": {
+    "exactDecimals": 0
+  },
+  "question": "$a$",
+  "task": "Avrunda talet"
+}

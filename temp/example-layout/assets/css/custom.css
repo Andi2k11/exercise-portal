@@ -1,0 +1,446 @@
+/* stylelint-disable no-duplicate-selectors, no-descending-specificity */
+
+/* Project custom styles */
+
+/* Ensure full-viewport layout without producing outer scroll */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden; /* prevent any page-level scrolling */
+}
+
+/* Wrapper provides the outer spacing so the card itself can be 100% of available area */
+
+/* Target: make the card match iPad Air dimensions while remaining responsive.
+   iPad Air CSS width in portrait is 820px; on larger viewports we center and
+   cap the width so the card remains the same size as on iPad. */
+#card-wrapper {
+  height: 100vh;
+  width: 100%;
+  padding: 20px; /* inner spacing instead of outer margin */
+  box-sizing: border-box;
+  overflow: hidden; /* prevent wrapper scrolling and clipping instead */
+  display: flex;
+  align-items: center; /* vertically center on tall viewports */
+  justify-content: center;
+}
+
+/* Constrain content width to iPad Air size on larger screens */
+.card-container {
+  width: 100%;
+  max-width: 820px; /* matches iPad Air CSS width */
+  height: 100%;
+}
+
+/* Prefer landscape aspect for the card: 16:10 approximates iPad Air landscape */
+
+.card-container {
+  aspect-ratio: 16 / 10;
+  max-width: 1180px; /* cap width on large viewports (landscape iPad-ish) */
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 40px); /* ensure it never exceeds viewport height minus padding */
+}
+
+.header-selects {
+  width: 100%;
+  display: flex;
+  gap: 0;
+  align-items: center;
+  padding: 0;
+}
+
+.select-slot {
+  box-sizing: border-box;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.select-slot select.form-select {
+  width: 100%;
+  padding: 0.35rem 0.5rem;
+}
+
+.select-slot.slot-book {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.select-slot.slot-chapter {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.select-slot.slot-exercise {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.select-wrap {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* If the device is taller than wide (portrait), scale the card to fit width while preserving aspect */
+@media (orientation: portrait) {
+  .card-container {
+    width: calc(100vw - 40px);
+    max-height: none;
+  }
+
+  /* Debug header visualization */
+  .header-debug {
+    width: calc(100% - 40px);
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    column-gap: 20px;
+    align-items: center;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0 20px;
+  }
+
+  .header-debug .debug-slot {
+    padding: 10px 12px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    margin: 0;
+  }
+
+  .header-debug .debug-left {
+    background: #ffecec;
+    border: 1px solid #ffb3b3;
+  }
+
+  .header-debug .debug-center {
+    background: #ecffea;
+    border: 1px solid #b3ffbf;
+  }
+
+  .header-debug .debug-right {
+    background: #e9f0ff;
+    border: 1px solid #b6c9ff;
+  }
+}
+
+/* Header row for centered menu slots */
+.header-row {
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  box-sizing: border-box;
+}
+
+.header-row .menu-slot {
+  box-sizing: border-box;
+  padding: 6px 8px;
+  min-height: 100%;
+}
+
+.header-row .slot-left {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.header-row .slot-center {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.header-row .slot-right {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+/* Neutral header slots (no success color) */
+.header-row .menu-slot {
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  color: inherit;
+}
+
+/* left slot should not have the success background; keep it neutral for the select */
+.header-row .slot-left {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.header-row .slot-left .form-select {
+  width: 100%;
+}
+
+/* center slot neutral (no success background) so select looks native */
+.header-row .slot-center {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.header-row .slot-center .form-select {
+  width: 100%;
+}
+
+/* right slot neutral for exercise select */
+.header-row .slot-right {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.header-row .slot-right .form-select {
+  width: 100%;
+}
+
+.full-card {
+  width: 100%;
+  height: 100%;
+  margin: 0; /* removed outer margin to avoid overflow */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* ensure card does not create scrollbars */
+
+  /* Limit card height to container's max-height to avoid overflow on large screens */
+  max-height: 100%;
+  position: relative; /* anchor for absolute-positioned summary overlay */
+}
+
+/* Header occupies 10% of the card height; body uses remaining space */
+.full-card .card-header {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 75px; /* fixed header height */
+  padding: 20px; /* keep 20px padding as requested */
+  flex: 0 0 auto;
+  overflow: visible;
+}
+
+.full-card .card-body {
+  flex: 1 1 92%;
+  overflow: hidden;
+}
+
+/* Hide main content until an exercise is selected */
+.full-card.no-exercise .sub-card,
+.full-card.no-exercise .split-area {
+  display: none !important;
+}
+
+/* Sub-card inside the main card: outer margin 12px and height 30% of parent's height */
+.sub-card {
+  box-sizing: border-box;
+  width: calc(100% - 24px); /* account for outer margin left+right */
+  margin: 12px;
+  height: 40%;
+  overflow: hidden;
+}
+
+/* Sub-card content styling: question (larger) and task (smaller) */
+.sub-card .question-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.sub-card .task-expression {
+  font-size: 1.25rem;
+  color: #333;
+  text-align: center;
+}
+
+/* small spacer to create an extra line break */
+.sub-card .line-break {
+  height: 0.8rem;
+}
+
+/* Split area fills remaining body space */
+.full-card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.split-area {
+  flex: 1 1 auto; /* take remaining vertical space */
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 12px 12px; /* inside spacing to account for inner-card margins */
+  gap: 12px;
+}
+
+.split-left {
+  flex: 7 0 0; /* 70% */
+  display: flex;
+}
+
+.split-right {
+  flex: 3 0 0; /* 30% */
+  display: flex;
+}
+
+.inner-card {
+  width: 100%;
+  height: 100%;
+  margin: 0; /* outer margin handled by split-area padding/gap */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Left value input styling */
+.value-entry {
+  gap: 8px;
+}
+
+.value-entry #value-field {
+  font-size: 1.25rem;
+}
+
+/* Flash message area reserved inside answer card: fixed height, no layout shifts */
+.flash-area {
+  height: 48px;
+  min-height: 48px;
+  max-height: 48px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flash-msg {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.flash-msg.success {
+  background: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+}
+
+.flash-msg.error {
+  background: #f8d7da;
+  color: #842029;
+  border: 1px solid #f5c2c7;
+}
+
+.flash-msg.visually-hidden {
+  display: none;
+}
+
+/* Input pad styles */
+.input-pad {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+}
+
+.pad-row {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, 1fr); /* four equal columns per row */
+}
+
+.pad-btn {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid rgb(0 0 0 / 8%);
+  background: #f8f9fa;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Make each pad row take proportional vertical space so the pad fills the right card */
+.pad-row {
+  height: calc((100% - 40px) / 6);
+}
+
+/* Ensure buttons expand to fill their row height */
+.pad-btn {
+  height: 100%;
+}
+
+/* Larger Enter button visual emphasis */
+.pad-btn:active {
+  background: #e9ecef;
+}
+
+/* Prevent any visible scrolling — content that doesn't fit will be clipped */
+.full-card .card-body {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+/* Exercise summary overlay/card shown when finished */
+.exercise-summary {
+  position: absolute;
+
+  /* position below the fixed header so header remains visible and interactive */
+  top: 75px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255 255 255 / 95%);
+  z-index: 40;
+  pointer-events: auto;
+}
+
+.exercise-summary.visually-hidden {
+  display: none !important;
+}
+
+.summary-card {
+  width: 80%;
+  max-width: 640px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
+}
+
+.summary-card .card-body {
+  padding: 2.5rem;
+}
+
+.summary-percent {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #0d6efd;
+}
+
+.summary-restart {
+  margin-top: 0.75rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+.summary-text {
+  display: none;
+}

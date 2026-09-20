@@ -1,0 +1,9 @@
+{
+  "id": "basic-ops",
+  "title": "Kvot, produkt, summa och differens",
+  "generator": "basicOps",
+  "params": { "count": 20 },
+  "validation": { "exactDecimals": 0 },
+  "question": "Beräkna [operation] av [tal1] och [tal2]",
+  "task": "Utför beräkningen"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mult-mixed-10-100-1000",
+  "title": "Multiplikation med 10, 100 och 1000 (heltal & decimaltal)",
+  "generator": "mixedMultiplyByPowersOf10",
+  "params": {
+    "count": 15,
+    "minFactorInt": 1,
+    "maxFactorInt": 999,
+    "minFactorDec": 0.1,
+    "maxFactorDec": 9.999,
+    "multipliers": [10, 100, 1000]
+  },
+  "validation": {},
+  "question": "$a \\\\times b$",
+  "task": "Beräkna multiplikationen"
+}

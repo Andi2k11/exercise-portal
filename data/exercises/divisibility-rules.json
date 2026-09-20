@@ -1,0 +1,9 @@
+{
+  "id": "divisibility-rules",
+  "title": "Delbarhetsregler 2,3,5,10",
+  "generator": "divisibility",
+  "params": { "count": 20, "min": 50, "max": 1000 },
+  "validation": {},
+  "question": "Vilka delbarhetsregler gäller för talet [tal1]?",
+  "task": "Delbarhetsregler"
+}

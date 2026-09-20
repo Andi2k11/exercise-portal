@@ -1,0 +1,100 @@
+/* Project custom styles adapted from example layout. */
+
+/* Ensure full-viewport layout without producing outer scroll */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#card-wrapper {
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  width: 100%;
+  max-width: 820px;
+  height: 100%;
+  aspect-ratio: 16 / 10;
+  max-width: 1180px;
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 40px);
+}
+
+.header-row {
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  box-sizing: border-box;
+}
+
+.header-row .menu-slot { box-sizing: border-box; padding: 6px 8px; }
+.header-row .slot-left { flex: 0 0 25%; max-width: 25%; }
+.header-row .slot-center { flex: 0 0 25%; max-width: 25%; }
+.header-row .slot-right { flex: 0 0 50%; max-width: 50%; }
+
+.full-card { width: 100%; height: 100%; margin: 0; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; max-height: 100%; position: relative; }
+.full-card .card-header { box-sizing: border-box; display: flex; align-items: center; height: 75px; padding: 20px; flex: 0 0 auto; overflow: visible; }
+.full-card .card-body { flex: 1 1 92%; overflow: hidden; display:flex; flex-direction:column; }
+
+.sub-card { box-sizing: border-box; width: calc(100% - 24px); margin: 12px; height: 40%; overflow: hidden; }
+.sub-card .question-text { font-size: 2.1rem; font-weight: 800; line-height: 1.02; text-align: center; }
+.sub-card .task-expression { font-size: 1.45rem; color: #333; text-align: center; }
+
+/* Ensure KaTeX output inherits the container typography so styles remain after render */
+.sub-card .question-text, .sub-card .question-text * {
+  font-size: 2.1rem !important;
+  font-weight: 800 !important;
+  line-height: 1.02 !important;
+}
+.sub-card .question-text .katex, .sub-card .question-text .katex * {
+  font-size: inherit !important;
+  font-weight: inherit !important;
+}
+.sub-card .line-break { height: 1.6rem; }
+
+.split-area { flex: 1 1 auto; display: flex; width: 100%; box-sizing: border-box; padding: 0 12px 12px; gap: 12px; }
+.split-left { flex: 7 0 0; display: flex; }
+.split-right { flex: 3 0 0; display: flex; }
+.inner-card { width: 100%; height: 100%; margin: 0; box-sizing: border-box; display: flex; flex-direction: column; overflow: hidden; }
+
+.value-entry #value-field { font-size: 1.25rem; }
+.flash-area { height: 48px; min-height: 48px; max-height: 48px; box-sizing: border-box; margin-top: 8px; display: flex; align-items: center; justify-content: center; }
+.flash-msg { padding: 0.5rem 1rem; border-radius: 6px; display: inline-block; }
+.flash-msg.success { background: #d1e7dd; color: #0f5132; border: 1px solid #badbcc; }
+.flash-msg.error { background: #f8d7da; color: #842029; border: 1px solid #f5c2c7; }
+.flash-msg.visually-hidden { display: none; }
+
+.input-pad { display: flex; flex-direction: column; gap: 8px; height: 100%; }
+.pad-row { display: grid; gap: 8px; grid-template-columns: repeat(4, 1fr); }
+.pad-btn { width: 100%; height: 100%; padding: 0.5rem; font-size: 1rem; border: 1px solid rgb(0 0 0 / 8%); background: #f8f9fa; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; user-select: none; }
+.pad-row { height: calc((100% - 40px) / 6); }
+.pad-btn:active { background: #e9ecef; }
+
+.exercise-summary { position: absolute; top: 75px; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; background: rgb(255 255 255 / 95%); z-index: 40; pointer-events: auto; }
+.exercise-summary.visually-hidden { display: none !important; }
+.summary-card { width: 80%; max-width: 640px; border-radius: 12px; box-shadow: 0 8px 24px rgb(0 0 0 / 12%); }
+.summary-card .card-body { padding: 2.5rem; }
+.summary-percent { font-size: 4.5rem; font-weight: 800; color: #0d6efd; }
+.summary-restart { margin-top: 0.75rem; padding: 0.5rem 1.25rem; font-size: 1rem; }
+.summary-text { display: none; }
+
+/* Portrait adjustments */
+@media (orientation: portrait) {
+  .card-container { width: calc(100vw - 40px); max-height: none; }
+}

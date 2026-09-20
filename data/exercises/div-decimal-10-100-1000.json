@@ -1,0 +1,15 @@
+{
+  "id": "div-decimal-10-100-1000",
+  "title": "Division med 10, 100 och 1000 (decimaltal)",
+  "generator": "divideDecimalByPowersOf10",
+  "params": {
+    "count": 15,
+    "minFactor": 0.1,
+    "maxFactor": 9999.999,
+    "divisors": [10, 100, 1000],
+    "requireNumeratorDecimal": true
+  },
+
+  "question": "$a \\div b$",
+  "task": "Beräkna kvoten"
+}

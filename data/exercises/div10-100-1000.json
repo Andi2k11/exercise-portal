@@ -1,0 +1,16 @@
+{
+  "id": "div10-100-1000",
+  "title": "Division med 10, 100 och 1000 (heltal)",
+  "generator": "divideByPowersOf10",
+  "params": {
+    "count": 15,
+    "minFactor": 1,
+    "maxFactor": 999,
+    "divisors": [10, 100, 1000]
+  },
+  "validation": {
+    "exactDecimals": 0
+  },
+  "question": "$a \\div b$",
+  "task": "Beräkna kvoten"
+}

@@ -1,0 +1,26 @@
+{
+  "books": [
+    {
+      "id": "matte-direkt-7",
+      "title": "Matte Direkt 7",
+      "chapters": [
+        {
+          "id": "ch1",
+          "title": "Kapitel 1",
+          "exercises": [
+            { "id": "mult10-100-1000", "title": "Multiplikation med 10, 100 och 1000 (heltal)", "path": "data/exercises/mult10-100-1000.json" },
+            { "id": "mult-decimal-10-100-1000", "title": "Multiplikation med 10, 100 och 1000 (decimaltal)", "path": "data/exercises/mult-decimal-10-100-1000.json" },
+            { "id": "mult-mixed-10-100-1000", "title": "Multiplikation med 10, 100 och 1000 (heltal & decimaltal)", "path": "data/exercises/mult-mixed-10-100-1000.json" },
+            { "id": "div10-100-1000", "title": "Division med 10, 100 och 1000 (heltal)", "path": "data/exercises/div10-100-1000.json" },
+            { "id": "div-decimal-10-100-1000", "title": "Division med 10, 100 och 1000 (decimaltal)", "path": "data/exercises/div-decimal-10-100-1000.json" },
+            { "id": "div-mixed-10-100-1000", "title": "Division med 10, 100 och 1000 (heltal & decimaltal)", "path": "data/exercises/div-mixed-10-100-1000.json" },
+            { "id": "round-int-100-99999", "title": "Avrundning (heltal)", "path": "data/exercises/round-int-100-99999.json" },
+            { "id": "round-decimal-0-10-4", "title": "Avrundning (decimaltal)", "path": "data/exercises/round-decimal-0-10-4.json" }
+            ,{ "id": "basic-ops", "title": "Kvot, produkt, summa och differens", "path": "data/exercises/basic-ops.json" }
+            ,{ "id": "divisibility-rules", "title": "Delbarhetsregler 2,3,5,10", "path": "data/exercises/divisibility-rules.json" }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "mult-decimal-10-100-1000",
+  "title": "Multiplikation med 10, 100 och 1000 (decimaltal)",
+  "generator": "multiplyDecimalByPowersOf10",
+  "params": {
+    "count": 15,
+    "minFactor": 0.1,
+    "maxFactor": 9.999,
+    "multipliers": [10, 100, 1000]
+  },
+  "validation": {},
+  "question": "$a \\\\times b$",
+  "task": "Beräkna multiplikationen"
+}

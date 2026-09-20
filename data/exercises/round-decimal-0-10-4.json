@@ -1,0 +1,15 @@
+{
+  "id": "round-decimal-0-10-4",
+  "title": "Avrundning (decimaltal)",
+  "generator": "roundDecimalByDigits",
+  "params": {
+    "count": 15,
+    "min": 0,
+    "max": 10
+  },
+  "validation": {
+    "maxDecimals": 4
+  },
+  "question": "$a$",
+  "task": "Avrunda talet"
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tests</title>
+</head>
+<body>
+  <h1>Unit tests</h1>
+  <pre id="results"></pre>
+
+  <script type="module">
+    import numbers from '../src/core/numbers.js';
+    import rng from '../src/core/rng.js';
+
+    const out = [];
+    function assert(cond, msg) { out.push((cond ? 'OK: ' : 'FAIL: ') + msg); }
+
+    // numbers tests
+    const n1 = numbers.parseDecimal('1,5');
+    assert(n1 != null && numbers.formatDecimal(n1) === '1,5', 'parse/format decimal 1,5');
+
+    const n2 = numbers.parseDecimal('2');
+    assert(numbers.formatDecimal(n2) === '2', 'format integer 2');
+
+    const n3 = numbers.parseDecimal('1,5000');
+    assert(numbers.formatDecimal(n3) === '1,5', 'trim trailing zeros');
+
+    const n4 = numbers.parseDecimal('-3,25');
+    assert(numbers.formatDecimal(n4) === '-3,25', 'negative decimal parse/format');
+
+    const n5 = numbers.parseDecimal('4.75');
+    assert(numbers.formatDecimal(n5) === '4,75', 'accept dot as decimal input and format with comma');
+
+    const n6 = numbers.parseDecimal('invalid');
+    assert(n6 === null, 'invalid input returns null');
+
+    // format with fixed decimals
+    const n7 = numbers.parseDecimal('1,2');
+    assert(numbers.formatDecimal(n7, 3) === '1,200', 'format with 3 decimals keeps trailing zeros');
+
+    // rng tests
+    const r1 = rng.makeRng('seed1');
+    const r2 = rng.makeRng('seed1');
+    const a = [r1(), r1(), r1()];
+    const b = [r2(), r2(), r2()];
+    assert(JSON.stringify(a) === JSON.stringify(b), 'rng deterministic for same seed');
+
+    document.getElementById('results').textContent = out.join('\n');
+  </script>
+</body>
+</html>

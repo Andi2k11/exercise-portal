@@ -1,0 +1,16 @@
+{
+  "id": "mult10-100-1000",
+  "title": "Multiplikation med 10, 100 och 1000 (heltal)",
+  "generator": "multiplyByPowersOf10",
+  "params": {
+    "count": 15,
+    "minFactor": 1,
+    "maxFactor": 999,
+    "multipliers": [10, 100, 1000]
+  },
+  "validation": {
+    "exactDecimals": 0
+  },
+  "question": "$a \\times b$",
+  "task": "Beräkna multiplikationen"
+}
