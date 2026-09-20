@@ -93,7 +93,14 @@ export async function initLoader() {
           const isDiv = ex.generator && String(ex.generator).toLowerCase().includes('div');
           const hasRound = first && typeof first.roundUnit !== 'undefined';
           let expr;
-          if (isDiv) {
+          // Special-case: problem-solving generator returns full question text in `a`.
+          if (ex.generator === 'problem-solving') {
+            // normalize whitespace and use as main task text
+            const raw = first.a || '';
+            const norm = String(raw).replace(/\s+/g, ' ').trim();
+            ex.task = norm || ex.task || '';
+            expr = ''; // hide the task-expression area for this exercise
+          } else if (isDiv) {
             // show as a fraction using \frac inside inline $...$ so auto-render picks it up
             expr = `$\\frac{${first.a}}{${first.b}}$`;
           } else if (hasRound) {
@@ -110,8 +117,18 @@ export async function initLoader() {
           } else {
             expr = `$${first.a} \\times ${first.b}$`;
           }
-        qEl.textContent = ex.task || '';
-        tEl.textContent = expr;
+        // For problem-solving show only the normalized task in the question area
+        if (ex.generator === 'problem-solving') {
+          qEl.textContent = ex.task || '';
+          qEl.style.fontStyle = 'normal';
+          qEl.style.fontWeight = '800';
+          tEl.textContent = '';
+          tEl.style.display = 'none';
+        } else {
+          qEl.textContent = ex.task || '';
+          tEl.textContent = expr;
+          tEl.style.display = '';
+        }
         // invoke app's renderer to initialise input area for the first item
         try { if (typeof window !== 'undefined' && typeof window.showCurrentItem === 'function') window.showCurrentItem(ex); } catch (e) {}
       } else {
@@ -135,6 +152,8 @@ export async function initLoader() {
     } catch (e) {}
 
     const tryRender = () => {
+      // Skip KaTeX auto-render for the combined problem-solving exercise
+      if (ex.generator === 'problem-solving') return;
       if (window.katexAutoRenderLoaded && typeof renderMathInElement === 'function') {
         try {
           renderMathInElement(qEl, { delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}] });

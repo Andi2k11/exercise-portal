@@ -1,5 +1,4 @@
 import { makeRng } from '../core/rng.js';
-import { parseDecimal, formatDecimal } from '../core/numbers.js';
 
 // params: { count, minFactor, maxFactor, multipliers }
 // For decimal generator: generate a random decimal < 10 with 1-3 decimal places

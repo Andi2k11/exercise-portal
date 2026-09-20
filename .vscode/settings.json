@@ -11,6 +11,10 @@
         "/^node tools/run-gen-round-decimal\\.mjs$/": {
             "approve": true,
             "matchCommandLine": true
-        }
+        },
+        "npm run lint": true,
+        "npx eslint": true,
+        "git add": true,
+        "git commit": true
     }
 }

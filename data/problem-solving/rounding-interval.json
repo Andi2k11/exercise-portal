@@ -1,0 +1,13 @@
+{
+  "meta": { "type": "roundingInterval", "schemaVersion": 1, "difficulty": 1, "curriculum": { "book": "Matte Direkt 7", "chapter": 1 } },
+  "templates": [
+    "Skriv det minsta naturliga talet och det största naturliga talet som avrundas till {target} när man avrundar till {unit}."
+  ],
+  "paramOptions": {
+    "unit": ["tiotal","entals","hundratal"],
+    "targetRange": { "min": 0, "max": 200 }
+  },
+  "names": { "places": ["Sivik","Bergby","Holmen"] },
+  "contexts": ["på vägen","i kartan"],
+  "answerSpec": { "type": "interval" }
+}

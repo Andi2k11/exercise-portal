@@ -1,0 +1,15 @@
+{
+  "meta": { "type": "lcm", "schemaVersion": 1, "difficulty": 2, "curriculum": { "book": "Matte Direkt 7", "chapter": 1 } },
+  "templates": [
+    "Det finns fler än {minTotal} karameller i burken. Vilket är det lägsta antalet karameller i burken om karamellerna kan delas lika {desc}?",
+    "Vilket är minsta talet större än {minTotal} som är delbart med {factors}?"
+  ],
+  "paramOptions": {
+    "minTotal": { "min": 10, "max": 200 },
+    "numFactors": { "min": 2, "max": 4 },
+    "factorRange": { "min": 2, "max": 12 }
+  },
+  "names": { "persons": ["Sara","Ali","Maja","Rikard","Dilan","Sandra"] },
+  "contexts": ["i klassrummet","på kalaset","i köket"],
+  "answerSpec": { "type": "integer" }
+}

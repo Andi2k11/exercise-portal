@@ -1,0 +1,15 @@
+{
+  "meta": { "type": "capacity", "schemaVersion": 1, "difficulty": 1, "curriculum": { "book": "Matte Direkt 7", "chapter": 1 } },
+  "templates": [
+    "{person} ska åka på match. Det är {count} spelare som ska åka {vehicle}. Varje {vehicle} tar {capacity} personer. Hur många {vehiclePlural} behöver de minst?",
+    "Det är {count} elever och {seats} platser per buss. Hur många bussar behövs?"
+  ],
+  "paramOptions": {
+    "vehicle": ["bil","buss","taxi"],
+    "capacityRange": { "min": 2, "max": 50 },
+    "countRange": { "min": 5, "max": 40 }
+  },
+  "names": { "persons": ["Rikard","Sara","Lina"] },
+  "contexts": ["på resa","till matchen"],
+  "answerSpec": { "type": "integer" }
+}

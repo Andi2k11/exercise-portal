@@ -1,0 +1,14 @@
+{
+  "meta": { "type": "actualValue", "schemaVersion": 1, "difficulty": 1, "curriculum": { "book": "Matte Direkt 7", "chapter": 1 } },
+  "templates": [
+    "Skylten säger att det är {rounded} {unit} till {place}. Hur många {subunit} kan det vara som kortast och som längst?"
+  ],
+  "paramOptions": {
+    "unit": "km",
+    "subunit": "meter",
+    "roundedRange": { "min": 1, "max": 50 }
+  },
+  "names": { "places": ["Sivik","Bergby","Holmen"] },
+  "contexts": ["på vägen","på skylten"],
+  "answerSpec": { "type": "interval", "unit": "meter" }
+}

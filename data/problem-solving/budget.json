@@ -1,0 +1,19 @@
+{
+  "meta": { "type": "budget", "schemaVersion": 1, "difficulty": 2, "curriculum": { "book": "Matte Direkt 7", "chapter": 1 } },
+  "templates": [
+    "Lag ett inköpsförslag för {group} med budget {budget} kr. Välj bland: {itemsList}.",
+    "Fotbollslaget har {budget} kr att köpa utrustning. Hur kan de fördela pengarna?"
+  ],
+  "paramOptions": {
+    "budgetRange": { "min": 500, "max": 20000 }
+  },
+  "items": [
+    { "name": "Tröja", "price": 279 },
+    { "name": "Shorts", "price": 105 },
+    { "name": "Strumpor", "price": 89 },
+    { "name": "Fotboll", "price": 185 }
+  ],
+  "names": { "groups": ["fotbollslaget","klassen","scoutlaget"] },
+  "contexts": ["inför matchen","i affären"],
+  "answerSpec": { "type": "optimisation" }
+}
