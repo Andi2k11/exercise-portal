@@ -318,7 +318,10 @@ function buildPad(container) {
           });
           btnContainer.appendChild(btn);
         });
-        if (inputArea) inputArea.appendChild(btnContainer);
+        if (inputArea) {
+          inputArea.style.display = '';
+          inputArea.appendChild(btnContainer);
+        }
         return;
       }
       // Render a simple numberline SVG for numberlinePoint generator
