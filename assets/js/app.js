@@ -318,17 +318,16 @@ function buildPad(container) {
           });
           btnContainer.appendChild(btn);
         });
-        // Append buttons to a dedicated MC container inside the left card body so
-        // they are not hidden together with the label row inside .value-entry.
-        const leftBody = document.querySelector('.split-left .inner-card .card-body');
-        if (leftBody) {
-          // remove any previous mc container
-          const prev = leftBody.querySelector('.mc-container'); if (prev) prev.remove();
-          leftBody.appendChild(btnContainer);
-        } else if (inputArea) {
-          // fallback: put into input-area
+        // Place buttons into the `#input-area` so they appear where the input used to be.
+        if (inputArea) {
+          // ensure it's visible and clear previous MC container there
           inputArea.style.display = '';
+          const prev = inputArea.querySelector('.mc-container'); if (prev) prev.remove();
           inputArea.appendChild(btnContainer);
+        } else {
+          // fallback: put into left card body
+          const leftBody = document.querySelector('.split-left .inner-card .card-body');
+          if (leftBody) { const prev = leftBody.querySelector('.mc-container'); if (prev) prev.remove(); leftBody.appendChild(btnContainer); }
         }
         return;
       }
