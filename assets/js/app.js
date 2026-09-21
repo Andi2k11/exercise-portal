@@ -412,7 +412,12 @@ function buildPad(container) {
     } catch (e) {}
 
     // Hide or show numeric input depending on exercise type
-    try { if (valueField) valueField.style.display = (ex && ex.generator === 'divisibility') ? 'none' : ''; } catch (e) {}
+    try {
+      if (valueField) {
+        const hideFor = ex && (ex.generator === 'divisibility' || ex.answerType === 'multipleChoice');
+        valueField.style.display = hideFor ? 'none' : '';
+      }
+    } catch (e) {}
 
     // Special rendering for divisibility exercise (checkboxes)
     try {
