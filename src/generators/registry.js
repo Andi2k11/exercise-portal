@@ -12,6 +12,9 @@ import psRegistry from './problemSolving/registry.js';
 import { makeRng } from '../core/rng.js';
 import numberlinePoint from './numberlinePoint.js';
 import numberline from '../answer-types/numberline.js';
+import digitPlaceInt from './digitPlaceInt.js';
+import digitPlaceDec from './digitPlaceDec.js';
+import digitPlaceMixed from './digitPlaceMixed.js';
 
 const registry = new Map();
 registry.set('multiplyByPowersOf10', multGen);
@@ -28,6 +31,9 @@ registry.set('divisibility', divisibility);
 registry.set('numberlinePoint', numberlinePoint);
 // Register answer-type alias so loader can access if needed
 registry.set('numberline', numberline);
+registry.set('digitPlaceInt', digitPlaceInt);
+registry.set('digitPlaceDec', digitPlaceDec);
+registry.set('digitPlaceMixed', digitPlaceMixed);
 
 // Problem solving subtypes (Matte Direkt 7 Kap 1)
 const withRng = (fn) => (opts, rng) => {

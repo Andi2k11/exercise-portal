@@ -1,0 +1,9 @@
+{
+  "id": "digit-place-int",
+  "title": "Siffraens plats - Heltal",
+  "generator": "digitPlaceInt",
+  "params": { "count": 12 },
+  "answerType": "multipleChoice",
+  "question": "Vilken plats har markerad siffra i talet?",
+  "validation": {}
+}
