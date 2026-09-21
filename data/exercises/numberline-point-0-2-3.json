@@ -1,0 +1,12 @@
+{
+  "id": "numberline-point-0-2-3",
+  "title": "Tallinje: peka ut värdet",
+  "generator": "numberlinePoint",
+  "params": {
+    "count": 12
+  },
+  "answerType": "numberline",
+  "question": "Peka ut vilket värde pilen visar på tallinjen.",
+  "validation": {},
+  "task": "Ange värdet pilen pekar på."
+}

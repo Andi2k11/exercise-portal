@@ -52,13 +52,20 @@ export async function initLoader() {
     if (!chap) return toggleNoExercise(false);
     const exRef = (chap.exercises || []).find(x => x.id === exerciseSelect.value);
     if (!exRef) { toggleNoExercise(false); return; }
-    // if the exercise is a reference with a path, lazy-load its full JSON
-    if (exRef.path) {
-      fetch(exRef.path).then(r => r.ok ? r.json() : null).then(full => {
+    // if the exercise is a reference with a path (or file), lazy-load its full JSON
+    const pathProp = exRef.path || exRef.file || null;
+    console.log('loader: selected exercise ref', exRef.id, 'pathProp=', pathProp);
+    if (pathProp) {
+      fetch(pathProp).then(r => {
+        if (!r.ok) throw new Error('Fetch failed: ' + r.status);
+        return r.json();
+      }).then(full => {
         const ex = Object.assign({}, exRef, full || {});
+        console.log('loader: loaded exercise JSON', ex.id || exRef.id, ex);
         showExercise(ex);
-      }).catch(err => { console.error('Failed to load exercise', err); showExercise(exRef); });
+      }).catch(err => { console.error('Failed to load exercise', err, exRef); showExercise(exRef); });
     } else {
+      console.log('loader: no path property on exercise ref, using ref directly', exRef);
       showExercise(exRef);
     }
     // ensure question text element has a default font size
@@ -106,6 +113,12 @@ export async function initLoader() {
           } else if (hasRound) {
             // rounding prompt: show plain text; UI showCurrentItem will render nicely
             expr = `Avrunda ${first.a} till ${first.roundLabel}`;
+          } else if (ex.generator === 'numberlinePoint') {
+            // Render a simple ASCII/SVG-friendly numberline description for now.
+            // The real interactive numberline answer-type will draw the line inside #answer-area.
+            const start = first.a; const end = first.b; const step = first.step;
+            // show start and end and a marker for the point index
+            expr = `Tallinje: ${start} — ${end} med steg ${step}. Pil pekar på position ${first.idx} (svar ${first.answer})`;
           } else if (first && typeof first.op === 'string') {
             // basic ops generator: use operation word in the question area
             let label = '';

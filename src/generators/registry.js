@@ -10,6 +10,8 @@ import basicOps from './basicOps.js';
 import divisibility from './divisibility.js';
 import psRegistry from './problemSolving/registry.js';
 import { makeRng } from '../core/rng.js';
+import numberlinePoint from './numberlinePoint.js';
+import numberline from '../answer-types/numberline.js';
 
 const registry = new Map();
 registry.set('multiplyByPowersOf10', multGen);
@@ -22,6 +24,10 @@ registry.set('roundByDigits', roundGen);
 registry.set('roundDecimalByDigits', roundDec);
 registry.set('basicOps', basicOps);
 registry.set('divisibility', divisibility);
+
+registry.set('numberlinePoint', numberlinePoint);
+// Register answer-type alias so loader can access if needed
+registry.set('numberline', numberline);
 
 // Problem solving subtypes (Matte Direkt 7 Kap 1)
 const withRng = (fn) => (opts, rng) => {

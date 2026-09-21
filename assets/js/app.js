@@ -170,9 +170,11 @@ function buildPad(container) {
 
   async function validateValue() {
     const val = valueField.value;
+    // Allow 'm' as a decimal separator (students may type 3m8 for 3,8)
+    const normalizedInput = String(val).replace(/m/gi, ',');
     const mod = await ensureNumbers();
     if (!mod) return;
-    const parsed = mod.parseDecimal(val);
+    const parsed = mod.parseDecimal(normalizedInput);
     // show flash for a few seconds, clear previous timer
     if (valueField._flashTimer) { clearTimeout(valueField._flashTimer); valueField._flashTimer = null; }
       if (parsed == null) {
@@ -214,7 +216,7 @@ function buildPad(container) {
       ex._attempts = (ex._attempts || 0) + 1;
       // parsed is normalized with dot; convert to number for comparison
       const userNum = Number(parsed);
-      const correctNum = Number(cur.answer);
+      const correctNum = Number(String(cur.answer).replace(',', '.'));
       let isEqual = (userNum === correctNum) || (Math.abs(userNum - correctNum) < 1e-9);
       // If this item has a roundUnit (decimal rounding), allow answers that match when
       // formatted to the correct number of decimals (accepts trailing zeros and comma/dot input).
@@ -272,6 +274,48 @@ function buildPad(container) {
     if (isDiv) {
       tEl.textContent = `$\\frac{${first.a}}{${first.b}}$`;
     } else {
+      // Render a simple numberline SVG for numberlinePoint generator
+      if (ex && ex.generator === 'numberlinePoint') {
+        // clear existing content
+        tEl.innerHTML = '';
+        const start = Number(first.a || 0);
+        const end = Number(first.b || 2);
+        const step = Number(first.step || 0.1);
+        const divisions = Math.round((end - start) / step);
+        if (!divisions || !isFinite(divisions)) {
+          console.warn('Invalid divisions computed for numberline mock', {start,end,step,divisions});
+          tEl.textContent = 'Ogiltig tallinje — försök igen';
+          return;
+        }
+        const ns = 'http://www.w3.org/2000/svg';
+        const svg = document.createElementNS(ns, 'svg');
+        svg.setAttribute('viewBox','0 0 1000 200'); svg.style.width='100%'; svg.style.height='160px';
+        const line = document.createElementNS(ns,'line'); line.setAttribute('x1','50'); line.setAttribute('y1','100'); line.setAttribute('x2','950'); line.setAttribute('y2','100'); line.setAttribute('stroke','#333'); line.setAttribute('stroke-width','2'); svg.appendChild(line);
+        for (let i=0;i<=divisions;i++){
+          const x = 50 + (900 * (i / divisions));
+          const isIntegerPos = Number.isInteger(start + i*step);
+          // longer ticks for integer positions
+          const tick = document.createElementNS(ns,'line'); tick.setAttribute('x1',String(x)); tick.setAttribute('y1', isIntegerPos ? '80' : '92'); tick.setAttribute('x2',String(x)); tick.setAttribute('y2', isIntegerPos ? '120' : '108'); tick.setAttribute('stroke','#333'); tick.setAttribute('stroke-width','1'); svg.appendChild(tick);
+          const lbl = document.createElementNS(ns,'text'); lbl.setAttribute('x',String(x)); lbl.setAttribute('y','78'); lbl.setAttribute('text-anchor','middle'); lbl.setAttribute('font-size','12');
+          // Only show labels for start and end using step precision
+          const stepStr = String(step);
+          const decimals = (stepStr.indexOf('.') >= 0) ? stepStr.split('.')[1].length : 0;
+          if (i === 0 || i === divisions) {
+            lbl.textContent = String((start + i*step).toFixed(decimals)).replace('.',',');
+          } else {
+            lbl.textContent = '';
+          }
+          svg.appendChild(lbl);
+        }
+        const idx = Number(first.idx || 0);
+        const mx = 50 + (900 * (idx / divisions));
+        const arrow = document.createElementNS(ns,'polygon');
+        // rotate arrow 180deg to point downwards
+        // Arrow tip should touch the baseline (y=100)
+        const points = `${mx},100 ${mx-8},120 ${mx+8},120`;
+        arrow.setAttribute('points',points); arrow.setAttribute('fill','#c44'); svg.appendChild(arrow);
+        tEl.appendChild(svg);
+      } else {
       if (hasRound) {
         // render rounding prompt with Swedish label exactly as requested
         // "Avrunda [tal] till [tiotal/hundratal/tusental]"
@@ -301,6 +345,7 @@ function buildPad(container) {
         tEl.textContent = rendered;
       } else {
         tEl.textContent = `$${first.a} \\times ${first.b}$`;
+      }
       }
     }
     // trigger KaTeX render

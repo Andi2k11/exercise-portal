@@ -18,6 +18,7 @@
             { "id": "round-decimal-0-10-4", "title": "Avrundning (decimaltal)", "path": "data/exercises/round-decimal-0-10-4.json" }
             ,{ "id": "basic-ops", "title": "Kvot, produkt, summa och differens", "path": "data/exercises/basic-ops.json" }
             ,{ "id": "divisibility-rules", "title": "Delbarhetsregler 2,3,5,10", "path": "data/exercises/divisibility-rules.json" }
+            ,{ "id": "numberline-point-0-2-3", "title": "Tallinje: peka ut värdet", "path": "data/exercises/numberline-point-0-2-3.json" }
             
           ]
         }
