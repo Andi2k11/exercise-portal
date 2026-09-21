@@ -26,7 +26,8 @@ function generate(opts = {}, rng) {
     // pick an index to ask about, never the ten-thousands (index 0)
     const idx = 1 + Math.floor(rngFn()*4); // 1..4
     const digit = digits[idx];
-    const correct = ['tusental','hundratal','tiotal','ental'][4-idx];
+    // idx is 1..4 corresponding to positions [1]=tusental, [2]=hundratal, [3]=tiotal, [4]=ental
+    const correct = ['tusental','hundratal','tiotal','ental'][idx-1];
     // build shuffled options
     const optsList = ['tusental','hundratal','tiotal','ental'];
     // shuffle
