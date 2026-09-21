@@ -417,8 +417,14 @@ function buildPad(container) {
     try {
       const valueEntry = document.querySelector('.value-entry');
       const hideFor = ex && (ex.generator === 'divisibility' || ex.answerType === 'multipleChoice');
+      if (valueEntry) {
+        // hide only the label+input row (first child), keep #input-area visible
+        const labelRow = valueEntry.querySelector('.d-flex');
+        if (labelRow) labelRow.style.display = hideFor ? 'none' : '';
+        // ensure container remains visible so input-area (buttons) are shown
+        valueEntry.style.display = '';
+      }
       if (valueField) valueField.style.display = hideFor ? 'none' : '';
-      if (valueEntry) valueEntry.style.display = hideFor ? 'none' : '';
     } catch (e) {}
 
     // Special rendering for divisibility exercise (checkboxes)
