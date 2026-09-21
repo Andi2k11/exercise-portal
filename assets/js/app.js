@@ -318,7 +318,15 @@ function buildPad(container) {
           });
           btnContainer.appendChild(btn);
         });
-        if (inputArea) {
+        // Append buttons to a dedicated MC container inside the left card body so
+        // they are not hidden together with the label row inside .value-entry.
+        const leftBody = document.querySelector('.split-left .inner-card .card-body');
+        if (leftBody) {
+          // remove any previous mc container
+          const prev = leftBody.querySelector('.mc-container'); if (prev) prev.remove();
+          leftBody.appendChild(btnContainer);
+        } else if (inputArea) {
+          // fallback: put into input-area
           inputArea.style.display = '';
           inputArea.appendChild(btnContainer);
         }
