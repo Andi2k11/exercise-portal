@@ -413,10 +413,10 @@ function buildPad(container) {
 
     // Hide or show numeric input depending on exercise type
     try {
-      if (valueField) {
-        const hideFor = ex && (ex.generator === 'divisibility' || ex.answerType === 'multipleChoice');
-        valueField.style.display = hideFor ? 'none' : '';
-      }
+      const valueEntry = document.querySelector('.value-entry');
+      const hideFor = ex && (ex.generator === 'divisibility' || ex.answerType === 'multipleChoice');
+      if (valueField) valueField.style.display = hideFor ? 'none' : '';
+      if (valueEntry) valueEntry.style.display = hideFor ? 'none' : '';
     } catch (e) {}
 
     // Special rendering for divisibility exercise (checkboxes)
