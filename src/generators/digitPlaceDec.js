@@ -9,11 +9,13 @@ function generate(opts = {}, rng) {
   for (let i=0;i<count;i++){
     // generate a number <9 with 4 decimals
     const intPart = Math.floor(rngFn()*9);
-    // ensure decimals are digits, can repeat
-    const d1 = Math.floor(rngFn()*10);
-    const d2 = Math.floor(rngFn()*10);
-    const d3 = Math.floor(rngFn()*10);
-    const d4 = Math.floor(rngFn()*10);
+    // ensure decimals are digits and all different so the asked digit is unambiguous
+    const ds = [];
+    while (ds.length < 4) {
+      const d = Math.floor(rngFn()*10);
+      if (!ds.includes(d)) ds.push(d);
+    }
+    const [d1, d2, d3, d4] = ds;
     const numStr = `${intPart},${d1}${d2}${d3}${d4}`;
     // pick a decimal index 1..4 (corresponding to d1..d4). Never pick entals or tiotusendel? requirement: never entals or ten-thousandth -> so avoid ental and tiotusendel (last digit)
     const idx = 1 + Math.floor(rngFn()*3); // 1..3 -> tiondel, hundradel, tusendel
