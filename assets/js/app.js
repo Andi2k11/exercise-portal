@@ -280,7 +280,14 @@ function buildPad(container) {
         // clear input area and render choices
         const inputArea = document.getElementById('input-area');
         if (inputArea) inputArea.innerHTML = '';
-        const choices = first.choices || [];
+        // Use provided choices, but shuffle them here if generator didn't already
+        const originalChoices = Array.isArray(first.choices) ? first.choices.slice() : [];
+        const choices = originalChoices.slice();
+        // Fisher-Yates shuffle
+        for (let s = choices.length - 1; s > 0; s--) {
+          const j = Math.floor(Math.random() * (s + 1));
+          [choices[s], choices[j]] = [choices[j], choices[s]];
+        }
         const btnContainer = document.createElement('div'); btnContainer.className = 'mc-container';
         choices.forEach((ch, idx) => {
           const btn = document.createElement('button'); btn.type='button'; btn.className='btn btn-outline-primary mc-choice';
