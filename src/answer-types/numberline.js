@@ -20,10 +20,13 @@ export default {
       // longer ticks for integer positions
       const tick = document.createElementNS(ns,'line'); tick.setAttribute('x1',String(x)); tick.setAttribute('y1', isIntegerPos ? '80' : '92'); tick.setAttribute('x2',String(x)); tick.setAttribute('y2', isIntegerPos ? '120' : '108'); tick.setAttribute('stroke','#333'); tick.setAttribute('stroke-width','1'); svg.appendChild(tick);
       const lbl = document.createElementNS(ns,'text'); lbl.setAttribute('x',String(x)); lbl.setAttribute('y','78'); lbl.setAttribute('text-anchor','middle'); lbl.setAttribute('font-size','12');
-      // Only show labels for start and end using step precision
+      // Show labels for start and end, and for intermediate ticks when divisions is small
       const stepStr = String(step);
       const decimals = (stepStr.indexOf('.') >= 0) ? stepStr.split('.')[1].length : 0;
       if (i === 0 || i === divisions) {
+        lbl.textContent = String((start + i*step).toFixed(decimals)).replace('.',',');
+      } else if (divisions <= 10) {
+        // show intermediate labels when there aren't too many
         lbl.textContent = String((start + i*step).toFixed(decimals)).replace('.',',');
       } else {
         lbl.textContent = '';
