@@ -44,6 +44,12 @@ function generate(opts = {}, rng) {
     // Derive span from actual start precision: if start is integer or tenth, span must be 2
     const isTenth = Math.abs(start * 10 - Math.round(start * 10)) < 1e-9;
     const isInteger = Math.abs(start - Math.round(start)) < 1e-9;
+    const isHundredth = Math.abs(start * 100 - Math.round(start * 100)) < 1e-9;
+    // If hundredth-precision start, prefer 0.01 step
+    if (isHundredth) {
+      step = 0.01;
+      span = 0.2; // keep small span for hundredth kind
+    }
     if (isInteger || isTenth) {
       span = 2;
       // prefer step 0.1 or 0.2 for integer or tenth starts
