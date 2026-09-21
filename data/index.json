@@ -19,6 +19,9 @@
             ,{ "id": "basic-ops", "title": "Kvot, produkt, summa och differens", "path": "data/exercises/basic-ops.json" }
             ,{ "id": "divisibility-rules", "title": "Delbarhetsregler 2,3,5,10", "path": "data/exercises/divisibility-rules.json" }
             ,{ "id": "numberline-point-0-2-3", "title": "Tallinje: peka ut värdet", "path": "data/exercises/numberline-point-0-2-3.json" }
+            ,{ "id": "digit-place-int", "title": "Siffraens plats - Heltal", "path": "data/exercises/digit-place-int.json" }
+            ,{ "id": "digit-place-dec", "title": "Siffraens plats - Decimaltal", "path": "data/exercises/digit-place-dec.json" }
+            ,{ "id": "digit-place-mixed", "title": "Siffraens plats - Blandat", "path": "data/exercises/digit-place-mixed.json" }
             
           ]
         }
