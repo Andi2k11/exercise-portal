@@ -23,6 +23,9 @@ function generate(opts = {}, rng) {
     // Determine tentative span based on chosen kind
     let span = (kind === 'hundredth') ? 0.2 : 2;
 
+    // If start/end should be integer or tenth-precision, prefer steps 0.1 or 0.2
+    // We'll enforce this after choosing startIndex by adjusting step when start is integer/tenth
+
     // Compute valid start multiples so that start is multiple of step and end = start + span fits in reasonable range
     // We allow start in [0, 2] but ensure end is start+span
       const maxStart = Math.min(2, 4 - span);
@@ -41,7 +44,16 @@ function generate(opts = {}, rng) {
     // Derive span from actual start precision: if start is integer or tenth, span must be 2
     const isTenth = Math.abs(start * 10 - Math.round(start * 10)) < 1e-9;
     const isInteger = Math.abs(start - Math.round(start)) < 1e-9;
-    if (isInteger || isTenth) span = 2;
+    if (isInteger || isTenth) {
+      span = 2;
+      // prefer step 0.1 or 0.2 for integer or tenth starts
+      if (Math.abs(step - 0.01) < 1e-9) {
+        // upgrade to 0.1 if hundredth was selected earlier
+        step = 0.1;
+      }
+      // otherwise ensure step is either 0.1 or 0.2
+      if (step !== 0.1 && step !== 0.2) step = 0.1;
+    }
     const end = +(start + span);
     let divisions = spanSteps;
       // Ensure at least two divisions so we can pick an internal index (not start/end)
