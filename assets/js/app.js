@@ -274,6 +274,44 @@ function buildPad(container) {
     if (isDiv) {
       tEl.textContent = `$\\frac{${first.a}}{${first.b}}$`;
     } else {
+      // multipleChoice answer type: render choices as buttons and handle selection
+      if (ex && ex.answerType === 'multipleChoice') {
+        tEl.textContent = first.template || ex.question || '';
+        // clear input area and render choices
+        const inputArea = document.getElementById('input-area');
+        if (inputArea) inputArea.innerHTML = '';
+        const choices = first.choices || [];
+        const btnContainer = document.createElement('div'); btnContainer.className = 'mc-container';
+        choices.forEach((ch, idx) => {
+          const btn = document.createElement('button'); btn.type='button'; btn.className='btn btn-outline-primary mc-choice';
+          btn.style.marginRight='8px'; btn.style.marginBottom='8px';
+          btn.textContent = String(ch);
+          btn.addEventListener('click', () => {
+            // evaluate
+            try {
+              const cur = ex._items[ex._current];
+              const selected = String(ch);
+              const correct = String(cur.answer);
+              ex._attempts = (ex._attempts || 0) + 1;
+              if (selected === correct) {
+                ex._score = (ex._score || 0) + 1;
+                flash.textContent = 'Rätt!'; flash.className = 'flash-msg success'; flash.classList.remove('visually-hidden');
+                setTimeout(() => {
+                  flash.classList.add('visually-hidden');
+                  ex._current += 1;
+                  if (ex._current >= ex._items.length) showSummary(ex);
+                  else showCurrentItem(ex);
+                }, 1200);
+              } else {
+                flash.textContent = 'Fel'; flash.className = 'flash-msg error'; flash.classList.remove('visually-hidden');
+              }
+            } catch (e) { console.error('MC check failed', e); }
+          });
+          btnContainer.appendChild(btn);
+        });
+        if (inputArea) inputArea.appendChild(btnContainer);
+        return;
+      }
       // Render a simple numberline SVG for numberlinePoint generator
       if (ex && ex.generator === 'numberlinePoint') {
         // clear existing content
