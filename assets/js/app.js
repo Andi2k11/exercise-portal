@@ -277,6 +277,8 @@ function buildPad(container) {
       // multipleChoice answer type: render choices as buttons and handle selection
       if (ex && ex.answerType === 'multipleChoice') {
         tEl.textContent = first.template || ex.question || '';
+        // ensure the value entry is hidden immediately (in case restore logic runs later)
+        try { const valueEntry = document.querySelector('.value-entry'); if (valueEntry) valueEntry.style.display = 'none'; const vf = document.getElementById('value-field'); if (vf) vf.style.display='none'; } catch(e) {}
         // clear input area and render choices
         const inputArea = document.getElementById('input-area');
         if (inputArea) inputArea.innerHTML = '';
