@@ -5,6 +5,6 @@
     "generator": "prefixStoraTal",
     "answerType": "number-with-unit",
     "displayText": "Skriv om talet med lämpligt prefix och enhet.",
-    "params": { "count": 10 }
+    "params": { "count": 10, "units": ["B","W","Wh","g","Hz"] }
   }
 ]

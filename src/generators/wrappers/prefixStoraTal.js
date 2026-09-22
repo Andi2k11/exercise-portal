@@ -27,7 +27,9 @@ export default {
     for (let i=0;i<count;i++) {
       // pick a target prefix (larger scales first so we get meaningful prefixes)
       const p = PREFIXES[randInt(rnd, 0, PREFIXES.length-1)];
-      const unit = UNITS[randInt(rnd, 0, UNITS.length-1)];
+      // allow exercise to restrict units via opts.units
+      const availableUnits = Array.isArray(opts.units) && opts.units.length ? opts.units : UNITS;
+      const unit = availableUnits[randInt(rnd, 0, availableUnits.length-1)];
       const maxBase = UNIT_RANGES[unit] || 1000000;
       // generate a base value in whole units such that when divided by p.scale
       // it yields either an integer or one decimal place
