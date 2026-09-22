@@ -58,7 +58,15 @@ registry.set('digitPlaceMixed', digitPlaceMixed);
 const wrap = (mod) => ({ generate: (opts, rng) => {
   try {
     const res = mod && typeof mod.generate === 'function' ? mod.generate(opts, rng) : null;
-    return Array.isArray(res) ? res : (res ? [res] : []);
+    if (Array.isArray(res)) return res;
+    if (!res) return [];
+    // If module returned an object like { type, params }, convert to a displayable item
+    if (res.type && res.params) {
+      const desc = `${res.type}: ${Object.keys(res.params).length ? JSON.stringify(res.params) : ''}`;
+      return [{ a: desc, answer: '' }];
+    }
+    // If it's a plain object, return as single item
+    return [res];
   } catch (e) { console.error('Generator wrapper error', e); return []; }
 }});
 
