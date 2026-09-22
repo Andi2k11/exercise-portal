@@ -35,12 +35,7 @@
           {
             "id": "ch1",
             "title": "Kapitel 1",
-            "exercises": [
-              { "id": "stora-tal-index-9", "title": "Stora tal (Kap 1)", "path": "data/exercises/stora-tal/index.json" },
-              { "id": "prefix-stora-tal-index-9", "title": "Prefix och stora tal (Kap 1)", "path": "data/exercises/prefix-stora-tal/index.json" },
-              { "id": "tiopotenser-index-9", "title": "Tiopotenser (Kap 1)", "path": "data/exercises/tiopotenser/index.json" },
-              { "id": "grundpotensform-index-9", "title": "Grundpotensform (Kap 1)", "path": "data/exercises/grundpotensform/index.json" }
-            ]
+            "exercises": []
           }
         ]
       }
