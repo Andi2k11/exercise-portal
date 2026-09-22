@@ -148,8 +148,11 @@ export async function initLoader() {
             else if (first.op === 'summa') label = `Beräkna summan av ${first.a} och ${first.b}`;
             else if (first.op === 'differens') label = `Beräkna differensen av ${first.a} och ${first.b}`;
             expr = label;
+          } else if (first && typeof first.display === 'string' && first.display.length > 0) {
+            // generator provided a ready-to-show display string (e.g. "15,0 MHz")
+            expr = first.display;
           } else {
-            expr = `$${first.a} \\times ${first.b}$`;
+            expr = `$${first.a} \times ${first.b}$`;
           }
         // For problem-solving show only the normalized task in the question area
         // Use `displayText` as a fallback when `task` isn't provided in the JSON.
