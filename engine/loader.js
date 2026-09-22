@@ -60,7 +60,13 @@ export async function initLoader() {
         if (!r.ok) throw new Error('Fetch failed: ' + r.status);
         return r.json();
       }).then(full => {
-        const ex = Object.assign({}, exRef, full || {});
+        let payload = full || {};
+        // If the fetched path is an index (array of exercises), pick the first item
+        if (Array.isArray(payload)) {
+          console.warn('loader: fetched an array for', pathProp, '- using first item');
+          payload = payload[0] || {};
+        }
+        const ex = Object.assign({}, exRef, payload);
         console.log('loader: loaded exercise JSON', ex.id || exRef.id, ex);
         showExercise(ex);
       }).catch(err => { console.error('Failed to load exercise', err, exRef); showExercise(exRef); });
