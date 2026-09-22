@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_stora_004",
+  "title": "Riskorn på schackbrädet - total mängd",
+  "path": "data/exercises/stora-tal/riskorn-total.json",
+  "generator": "totalGrainsOnBoard",
+  "answerType": "number",
+  "displayText": "Om antalet riskorn fördubblas för varje ruta och det finns 64 rutor, hur många riskorn skulle finnas totalt på hela brädet? Skriv svaret i plain siffror (utan prefix).",
+  "latex": "\\sum_{k=0}^{63}2^{k} = 2^{64}-1",
+  "params": { "squares": 64 },
+  "difficulty": 3,
+  "learningObjectives": ["Summera geometrisk serie","Förstå stora tal"],
+  "hints": ["Summan av 1+2+4+...+2^{63} = 2^{64}-1.","Använd uttrycket för geometrisk serie eller potenser."],
+  "sampleSolution": "Totalt = $2^{64}-1 \\approx 18\\ 446\\ 744\\ 073\\ 709\\ 551$.",
+  "allowPartial": false,
+  "tags": ["geometrisk serie","potenser"],
+  "provenance": { "source": "Kapitel Stora tal - Sissas berättelse", "page": 7 }
+}

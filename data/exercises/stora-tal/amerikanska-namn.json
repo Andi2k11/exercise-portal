@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_stora_007",
+  "title": "Amerikanska namn på stora tal",
+  "path": "data/exercises/stora-tal/amerikanska-namn.json",
+  "generator": "convertSwedishToAmericanLargeNumber",
+  "answerType": "multipleChoice",
+  "displayText": "I USA kallas vissa stora tal annorlunda. a) Hur många \"billions\" (amerikanskt) går det på en biljon (svensk)? b) Hur många \"millions\" går det på en biljon (svensk)? Välj rätt alternativ för varje fråga.",
+  "latex": null,
+  "params": {
+    "questions": [
+      { "q": "Hur många US billions i en svensk biljon?", "correct": 1000, "options": [100, 1000, 10000, 1000000] },
+      { "q": "Hur många US millions i en svensk biljon?", "correct": 1000000, "options": [100000, 1000000, 10000000, 1000000000] }
+    ]
+  },
+  "difficulty": 2,
+  "learningObjectives": ["Förstå internationella namn på stora tal","Omvandla mellan olika benämningssystem"],
+  "hints": ["1 biljon (sv) = 10^12. I USA är \"billion\" = 10^9.","Räkna hur många 10^9 som ryms i 10^12."],
+  "sampleSolution": "a) 1 000  b) 1 000 000",
+  "allowPartial": false,
+  "tags": ["storleksordning","internationellt"],
+  "provenance": { "source": "Kapitel Stora tal", "page": 7 }
+}

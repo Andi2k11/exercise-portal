@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_tiop_003",
+  "title": "Skriv med tiopotens",
+  "path": "data/exercises/tiopotenser/skriv-med-tiopotens.json",
+  "generator": "numberToTenPower",
+  "answerType": "multipleChoice",
+  "displayText": "Skriv talen som en tiopotens: a) 100  b) 10 000  c) 100 000  d) 10 000 000",
+  "params": { "items": [ { "value": 100, "answer": "10^2" }, { "value": 10000, "answer": "10^4" }, { "value": 100000, "answer": "10^5" }, { "value": 10000000, "answer": "10^7" } ] },
+  "difficulty": 1,
+  "learningObjectives": ["Känna igen tiopotenser","Skriva tal som 10^n"],
+  "hints": ["Gruppera nollor per tre eller räkna exponent direkt"],
+  "sampleSolution": "a) 10^2  b) 10^4  c) 10^5  d) 10^7",
+  "tags": ["tiopotenser"],
+  "provenance": { "source": "Tiopotenser", "page": 9 }
+}

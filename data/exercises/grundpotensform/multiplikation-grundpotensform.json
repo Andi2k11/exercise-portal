@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_grundpot_005",
+  "title": "Beräkna i grundpotensform: multiplikation",
+  "path": "data/exercises/grundpotensform/multiplikation-grundpotensform.json",
+  "generator": "multiplyScientificNotation",
+  "answerType": "number",
+  "displayText": "Beräkna och svara i grundpotensform: a) 3 · 10^6 · 1.5 · 10^2",
+  "params": { "items": [ { "expr": "3e6 * 1.5e2", "expected": "4.5 · 10^8" } ] },
+  "difficulty": 2,
+  "learningObjectives": ["Multiplicera tal i grundpotensform","Reglera koefficienten till 1–10"],
+  "hints": ["Multiplicera koefficienterna och addera exponenterna.","Justera så koefficienten ligger mellan 1 och 10."],
+  "sampleSolution": "4,5 · 10^8",
+  "tags": ["grundpotensform","multiplikation"],
+  "provenance": { "source": "Räkna med tal i grundpotensform", "page": 11 }
+}

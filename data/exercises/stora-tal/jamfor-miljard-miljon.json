@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_stora_005",
+  "title": "Jämförelse: miljard vs miljon",
+  "path": "data/exercises/stora-tal/jamfor-miljard-miljon.json",
+  "generator": "ratioBetweenPowersOfTen",
+  "answerType": "number",
+  "displayText": "Hur många gånger större är en miljard jämfört med en miljon?",
+  "latex": null,
+  "params": { "larger": 1000000000, "smaller": 1000000 },
+  "difficulty": 1,
+  "learningObjectives": ["Förstå tusen-, miljon- och miljard-ordningarna","Division av stora tal"],
+  "hints": ["Dividera 1 000 000 000 med 1 000 000.","Använd tusen som referensenhet."],
+  "sampleSolution": "1 000 000 000 / 1 000 000 = 1 000 → en miljard är 1 000 gånger större än en miljon.",
+  "allowPartial": false,
+  "tags": ["storleksordning","jämförelse"],
+  "provenance": { "source": "Kapitel Stora tal", "page": 7, "media": ["_page_7_Picture_6.jpeg"] }
+}

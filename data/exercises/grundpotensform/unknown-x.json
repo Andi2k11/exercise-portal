@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_grundpot_007",
+  "title": "Vilket tal ska stå istället för x?",
+  "path": "data/exercises/grundpotensform/unknown-x.json",
+  "generator": "solveForCoefficientOrExponent",
+  "answerType": "number",
+  "displayText": "Vilket tal ska stå i stället för x? a) 4 500 = 4.5 · 10^x",
+  "params": { "equation": "4500 = 4.5 * 10^x" },
+  "difficulty": 2,
+  "learningObjectives": ["Lösa för exponent i grundpotensform"],
+  "hints": ["Skriv 4500 som 4,5 · 10^n och jämför exponenterna."],
+  "sampleSolution": "x = 3",
+  "tags": ["grundpotensform","ekvation"],
+  "provenance": { "source": "Stora tal i grundpotensform", "page": 12 }
+}

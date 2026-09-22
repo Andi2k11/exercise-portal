@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_prefix_001",
+  "title": "Skriv utan prefix: GB → bytes",
+  "path": "data/exercises/prefix-stora-tal/gb-till-bytes.json",
+  "generator": "removePrefixBytes",
+  "answerType": "number",
+  "displayText": "Skriv utan prefix: 8 GB = ? bytes",
+  "latex": null,
+  "params": { "value": 8, "prefix": "G", "unit": "bytes", "prefix_multiplier": 1000000000 },
+  "difficulty": 1,
+  "learningObjectives": ["Konvertera mellan prefix och absoluta tal","Förstå prefixen kilo/mega/giga/tera"],
+  "hints": ["G = 10^9.","Multiplicera antalet GB med 1 000 000 000."],
+  "sampleSolution": "8 × 1 000 000 000 = 8 000 000 000 bytes",
+  "tags": ["prefix","bytes","konvertering"],
+  "provenance": { "source": "Prefix för stora tal", "page": 8, "media": ["_page_8_Picture_12.jpeg"] }
+}

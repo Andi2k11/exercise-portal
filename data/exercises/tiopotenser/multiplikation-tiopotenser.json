@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_tiop_004",
+  "title": "Räkna med tiopotenser – multiplikation",
+  "path": "data/exercises/tiopotenser/multiplikation-tiopotenser.json",
+  "generator": "computeTenPowerMultiplication",
+  "answerType": "number",
+  "displayText": "Beräkna och svara med en tiopotens: a) 10^3 · 10^4  b) 10^5 · 10^3  c) 10^6 · 10^2 · 10^4  d) 10^7 · 10^5 · 10",
+  "params": { "items": [ { "expr": "10^3*10^4", "answer": "10^7" }, { "expr": "10^5*10^3", "answer": "10^8" }, { "expr": "10^6*10^2*10^4", "answer": "10^12" }, { "expr": "10^7*10^5*10^1", "answer": "10^13" } ] },
+  "difficulty": 2,
+  "learningObjectives": ["Regler för multiplikation av potenser","Addering av exponenter"],
+  "hints": ["Addera exponenterna när basen är densamma"],
+  "sampleSolution": "a) 10^7  b) 10^8  c) 10^12  d) 10^13",
+  "tags": ["tiopotenser","multiplikation"],
+  "provenance": { "source": "Räkna med tiopotenser", "page": 11 }
+}

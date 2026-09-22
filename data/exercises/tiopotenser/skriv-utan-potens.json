@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_tiop_002",
+  "title": "Skriv talen utan potens",
+  "path": "data/exercises/tiopotenser/skriv-utan-potens.json",
+  "generator": "tenPowerToNumber",
+  "answerType": "multipleChoice",
+  "displayText": "Skriv talen utan potens: a) 10^4  b) 10^5  c) 10^7  d) 10^9",
+  "params": { "items": [ { "expr": "10^4", "answer": 10000 }, { "expr": "10^5", "answer": 100000 }, { "expr": "10^7", "answer": 10000000 }, { "expr": "10^9", "answer": 1000000000 } ] },
+  "difficulty": 1,
+  "learningObjectives": ["Konvertera mellan potens och vanlig form"],
+  "hints": ["Beräkna 10^n för varje n"],
+  "sampleSolution": "a) 10 000  b) 100 000  c) 10 000 000  d) 1 000 000 000",
+  "tags": ["tiopotenser"],
+  "provenance": { "source": "Tiopotenser", "page": 9 }
+}

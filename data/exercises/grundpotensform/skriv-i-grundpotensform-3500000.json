@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_grundpot_001",
+  "title": "Skriv i grundpotensform: 3 500 000",
+  "path": "data/exercises/grundpotensform/skriv-i-grundpotensform-3500000.json",
+  "generator": "toScientificNotation",
+  "answerType": "number",
+  "displayText": "Skriv talet 3 500 000 i grundpotensform.",
+  "latex": null,
+  "params": { "value": 3500000 },
+  "difficulty": 1,
+  "learningObjectives": ["Skriva tal i grundpotensform","Förstå tal mellan 1 och 10 gånger 10^n"],
+  "hints": ["Dela talet så att koefficienten är mellan 1 och 10.","Flytta decimaltecknet så att ett tal mellan 1 och 10 återstår."],
+  "sampleSolution": "3,5 · 10^6",
+  "tags": ["grundpotensform","notation"],
+  "provenance": { "source": "Stora tal i grundpotensform", "page": 10, "media": ["_page_10_Picture_40.jpeg"] }
+}

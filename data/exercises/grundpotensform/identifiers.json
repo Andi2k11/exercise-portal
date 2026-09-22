@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_grundpot_004",
+  "title": "Identifiera grundpotensform i en lista",
+  "path": "data/exercises/grundpotensform/identifiers.json",
+  "generator": "identifyScientificNotationItems",
+  "answerType": "multipleChoice",
+  "displayText": "I rutan finns flera tal. Välj de som redan är skrivna i grundpotensform.",
+  "params": { "items": ["4 · 10^5","42 · 10^5","5 · 10^4","0.5 · 10^4"] },
+  "difficulty": 2,
+  "learningObjectives": ["Känna igen korrekt grundpotensform"],
+  "hints": ["Koefficienten måste vara mellan 1 och 10."],
+  "sampleSolution": "4 · 10^5 och 5 · 10^4",
+  "tags": ["grundpotensform","igenkänning"],
+  "provenance": { "source": "Stora tal i grundpotensform", "page": 12 }
+}

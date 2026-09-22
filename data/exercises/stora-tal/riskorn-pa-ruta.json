@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_stora_003",
+  "title": "Riskorn på schackbrädet - antal på en ruta",
+  "path": "data/exercises/stora-tal/riskorn-pa-ruta.json",
+  "generator": "powerOfTwoAtSquare",
+  "answerType": "number",
+  "displayText": "På ett schackbräde dubblas antalet riskorn för varje ruta. Hur många riskorn finns det på den åttonde rutan?",
+  "latex": "$2^{7}$",
+  "params": { "square_index": 8 },
+  "difficulty": 2,
+  "learningObjectives": ["Förstå potenser av två","Tolka exponentiell tillväxt"],
+  "hints": ["Första rutan = $2^{0}$ riskorn (1).","På n:te rutan = $2^{n-1}$ riskorn."],
+  "sampleSolution": "På 8:e rutan: $2^{7} = 128$ riskorn.",
+  "allowPartial": false,
+  "tags": ["potenser","exponentiell"],
+  "provenance": { "source": "Kapitel Stora tal - Sissas berättelse", "page": 7 }
+}

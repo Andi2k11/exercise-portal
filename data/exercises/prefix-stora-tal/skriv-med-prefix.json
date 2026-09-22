@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_prefix_004",
+  "title": "Skriv med lämpligt prefix",
+  "path": "data/exercises/prefix-stora-tal/skriv-med-prefix.json",
+  "generator": "chooseAppropriatePrefix",
+  "answerType": "multipleChoice",
+  "displayText": "Skriv med lämpligt prefix: a) 400 g  b) 5 000 g  c) 1 500 000 Hz  d) 56 000 000 000 000 Wh. Välj en lämplig prefix-notation för varje.",
+  "params": { "items": [ { "text": "400 g", "suggestions": ["0.4 kg","400 g","400000 mg","0.0004 t"] }, { "text": "5 000 g", "suggestions": ["5 kg","5000 g","0.005 t","5000000 mg"] }, { "text": "1 500 000 Hz", "suggestions": ["1.5 MHz","1500 kHz","1500000 Hz","0.0015 GHz"] }, { "text": "56 000 000 000 000 Wh", "suggestions": ["56 TWh","56 000 GWh","56 000 000 MWh","56 PWh"] } ] },
+  "difficulty": 2,
+  "learningObjectives": ["Välja lämpliga prefix för tal","Förstå storleksordning"],
+  "hints": ["Sträva efter tal mellan 1 och 1000 med passande prefix","Tänk vilken enhet som är vanligast i sammanhanget"],
+  "sampleSolution": "a) 0,4 kg  b) 5 kg  c) 1,5 MHz  d) 56 TWh",
+  "tags": ["prefix","notation"],
+  "provenance": { "source": "Prefix för stora tal", "page": 8 }
+}

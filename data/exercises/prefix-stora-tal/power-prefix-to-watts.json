@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_prefix_003",
+  "title": "Omvandla kW/MW/TW till W",
+  "path": "data/exercises/prefix-stora-tal/power-prefix-to-watts.json",
+  "generator": "powerPrefixToWatts",
+  "answerType": "multipleChoice",
+  "displayText": "Hur många watt (W) är a) 200 kW  b) 14 MW  c) 160 TW? Välj rätt svar för varje.",
+  "params": { "items": [ { "label": "a", "value": 200, "prefix": "k", "multiplier": 1000 }, { "label": "b", "value": 14, "prefix": "M", "multiplier": 1000000 }, { "label": "c", "value": 160, "prefix": "T", "multiplier": 1000000000000 } ] },
+  "difficulty": 2,
+  "learningObjectives": ["Prefixkonversion","Enhetsomvandling"],
+  "hints": ["k = 10^3, M = 10^6, T = 10^12","Multiplicera med prefixets multiplikator"],
+  "sampleSolution": "a) 200 000 W  b) 14 000 000 W  c) 160 000 000 000 000 W",
+  "tags": ["prefix","watt","enheter"],
+  "provenance": { "source": "Prefix för stora tal", "page": 8 }
+}

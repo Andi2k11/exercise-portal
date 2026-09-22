@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_prefix_002",
+  "title": "Skriv utan prefix: TB → bytes",
+  "path": "data/exercises/prefix-stora-tal/tb-till-bytes.json",
+  "generator": "removePrefixBytes",
+  "answerType": "number",
+  "displayText": "Skriv utan prefix: 1,5 TB = ? bytes",
+  "latex": null,
+  "params": { "value": 1.5, "prefix": "T", "unit": "bytes", "prefix_multiplier": 1000000000000 },
+  "difficulty": 2,
+  "learningObjectives": ["Konvertera decimaltal med prefix","Arbeta med stora multiplikationer"],
+  "hints": ["T = 10^12.","Multiplicera 1,5 med 1 000 000 000 000."],
+  "sampleSolution": "1.5 × 1 000 000 000 000 = 1 500 000 000 000 bytes",
+  "tags": ["prefix","bytes","konvertering"],
+  "provenance": { "source": "Prefix för stora tal", "page": 8 }
+}

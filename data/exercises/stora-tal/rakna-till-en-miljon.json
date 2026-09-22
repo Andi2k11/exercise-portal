@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_stora_001",
+  "title": "Räkna till en miljon",
+  "path": "data/exercises/stora-tal/rakna-till-en-miljon.json",
+  "generator": "countSecondsToNumber",
+  "answerType": "problem-solving",
+  "displayText": "Tänk dig att du räknar från talet ett och räknar ett heltal varje sekund. Hur lång tid tar det att räkna till en miljon? Ange svaret i lämpliga enheter (dagar, veckor eller månader).",
+  "latex": null,
+  "params": {
+    "target": 1000000,
+    "rate_per_second": 1
+  },
+  "difficulty": 2,
+  "learningObjectives": ["Skatta storlekar","Konvertera sekunder till större tidsenheter"],
+  "hints": ["Räkna antalet sekunder till minuter, timmar och sedan till dagar.","1 dag = 24 timmar, 1 timme = 3600 sekunder."],
+  "sampleSolution": "1 000 000 sekunder ≈ 11,57 dagar (1 000 000 / 86 400 ≈ 11,57).",
+  "allowPartial": false,
+  "tags": ["storleksordning","enheter","tid"],
+  "provenance": { "source": "Kapitel Stora tal", "page": 7, "media": ["_page_6_Picture_0.jpeg"] }
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_grundpot_006",
+  "title": "Division i grundpotensform",
+  "path": "data/exercises/grundpotensform/division-grundpotensform.json",
+  "generator": "divideScientificNotation",
+  "answerType": "number",
+  "displayText": "Beräkna och svara i grundpotensform: b) 7.2 · 10^9 / 8 · 10^3",
+  "params": { "numerator_coefficient": 7.2, "numerator_exp": 9, "denominator_coefficient": 8, "denominator_exp": 3 },
+  "difficulty": 2,
+  "learningObjectives": ["Dividera tal i grundpotensform","Normalisera koefficienten"],
+  "hints": ["Dividera koefficienterna och subtrahera exponenterna.","0,9 · 10^6 → normalisera till 9 · 10^5."],
+  "sampleSolution": "9 · 10^5",
+  "tags": ["grundpotensform","division"],
+  "provenance": { "source": "Räkna med tal i grundpotensform", "page": 11 }
+}

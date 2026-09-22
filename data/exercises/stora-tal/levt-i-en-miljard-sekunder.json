@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_stora_002",
+  "title": "Har du levt i en miljard sekunder?",
+  "path": "data/exercises/stora-tal/levt-i-en-miljard-sekunder.json",
+  "generator": "secondsToYearsCompare",
+  "answerType": "number",
+  "displayText": "En miljard sekunder — ungefär hur många år är det? (avrunda till heltal antal år)",
+  "latex": null,
+  "params": {
+    "seconds": 1000000000,
+    "seconds_per_year": 31557600
+  },
+  "difficulty": 2,
+  "learningObjectives": ["Konvertera mellan sekunder och år","Förstå storleksordning för stora tal"],
+  "hints": ["Använd ungefärligt värde: 1 år ≈ 31 557 600 sekunder (365,25 dagar).","Dela antalet sekunder med sekunder per år."],
+  "sampleSolution": "1 000 000 000 / 31 557 600 ≈ 31,7 år → cirka 32 år.",
+  "tolerance": 1,
+  "toleranceType": "absolute",
+  "allowPartial": false,
+  "tags": ["storleksordning","tid"],
+  "provenance": { "source": "Kapitel Stora tal", "page": 7 }
+}

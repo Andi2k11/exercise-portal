@@ -1,0 +1,1463 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Stora tal",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          55.001953125,
+          39.8798828125
+        ],
+        [
+          136.6146095717884,
+          38.2353515625
+        ],
+        [
+          136.6146095717884,
+          56.98308103294746
+        ],
+        [
+          53.837890625,
+          57.1474609375
+        ]
+      ]
+    },
+    {
+      "title": "Prefix f\u00f6r stora tal",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          53.546875,
+          37.488869100623326
+        ],
+        [
+          223.68765743073047,
+          38.2353515625
+        ],
+        [
+          223.68765743073047,
+          57.73285841495993
+        ],
+        [
+          53.546875,
+          55.5029296875
+        ]
+      ]
+    },
+    {
+      "title": "\\rightarrow Exempel",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          60.050377833753146,
+          275.8701171875
+        ],
+        [
+          124.60453400503778,
+          275.8701171875
+        ],
+        [
+          124.60453400503778,
+          290.91362422083705
+        ],
+        [
+          60.050377833753146,
+          290.91362422083705
+        ]
+      ]
+    },
+    {
+      "title": "Svar:",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          69.80856423173803,
+          314.15672306322347
+        ],
+        [
+          96.83123425692695,
+          312.8720703125
+        ],
+        [
+          96.83123425692695,
+          323.1540516473731
+        ],
+        [
+          69.80856423173803,
+          323.5615234375
+        ]
+      ]
+    },
+    {
+      "title": "Tiopotenser",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          55.583984375,
+          37.4130859375
+        ],
+        [
+          174.89672544080605,
+          37.4130859375
+        ],
+        [
+          174.89672544080605,
+          57.9697265625
+        ],
+        [
+          55.583984375,
+          57.9697265625
+        ]
+      ]
+    },
+    {
+      "title": "Stora tal i grundpotensform",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          54.04534005037783,
+          38.2353515625
+        ],
+        [
+          316.333984375,
+          36.5908203125
+        ],
+        [
+          316.01511335012594,
+          58.7919921875
+        ],
+        [
+          53.837890625,
+          60.4365234375
+        ]
+      ]
+    },
+    {
+      "title": "Exempel",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          62.30226700251889,
+          203.5107421875
+        ],
+        [
+          126.85642317380352,
+          201.8662109375
+        ],
+        [
+          126.85642317380352,
+          217.4892578125
+        ],
+        [
+          62.30226700251889,
+          219.1337890625
+        ]
+      ]
+    },
+    {
+      "title": "R\u00e4kna med tiopotenser",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          54.12890625,
+          35.357421875
+        ],
+        [
+          276.23173803526447,
+          35.357421875
+        ],
+        [
+          276.23173803526447,
+          56.736328125
+        ],
+        [
+          54.12890625,
+          56.736328125
+        ]
+      ]
+    },
+    {
+      "title": "Multiplikaton av tiopotenser",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          72.81108312342569,
+          80.58203125
+        ],
+        [
+          202.67002518891687,
+          78.9375
+        ],
+        [
+          202.67002518891687,
+          91.47284060552093
+        ],
+        [
+          72.462890625,
+          92.09375
+        ]
+      ]
+    },
+    {
+      "title": "R\u00e4kna med tal i grundpotensform",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          57.04785894206549,
+          38.2353515625
+        ],
+        [
+          374.828125,
+          36.5908203125
+        ],
+        [
+          374.56423173803523,
+          58.7919921875
+        ],
+        [
+          57.0390625,
+          60.4365234375
+        ]
+      ]
+    },
+    {
+      "title": "Exempel",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          65.30478589420655,
+          78.9375
+        ],
+        [
+          129.10831234256926,
+          78.9375
+        ],
+        [
+          129.10831234256926,
+          94.47195013357079
+        ],
+        [
+          65.30478589420655,
+          94.47195013357079
+        ]
+      ]
+    },
+    {
+      "title": "30 Skriv i grundpotensform.",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          52.544080604534,
+          246.2685546875
+        ],
+        [
+          187.123046875,
+          244.6240234375
+        ],
+        [
+          186.90680100755668,
+          261.67230632235083
+        ],
+        [
+          51.509765625,
+          261.8916015625
+        ]
+      ]
+    },
+    {
+      "title": "35 Vilket tal ska st\u00e5 i st\u00e4llet f\u00f6r x?",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          51.042821158690174,
+          433.7451171875
+        ],
+        [
+          209.42569269521408,
+          433.7451171875
+        ],
+        [
+          209.42569269521408,
+          450.61620658949244
+        ],
+        [
+          50.63671875,
+          449.3681640625
+        ]
+      ]
+    },
+    {
+      "title": "39 L\u00f6s uppgift 37 och 38 med programmering.\nAnv\u00e4nd pythonprogrammet i rutan.",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          52.091796875,
+          601.8984375
+        ],
+        [
+          267.9748110831234,
+          600.25390625
+        ],
+        [
+          267.9748110831234,
+          629.85546875
+        ],
+        [
+          50.927734375,
+          631.5
+        ]
+      ]
+    },
+    {
+      "title": "Sm\u00e5 tal i grundpotensform och med prefix",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          51.042821158690174,
+          33.712890625
+        ],
+        [
+          447.37531486146094,
+          33.712890625
+        ],
+        [
+          447.37531486146094,
+          56.736328125
+        ],
+        [
+          50.927734375,
+          56.736328125
+        ]
+      ]
+    },
+    {
+      "title": "Tal i potensform",
+      "heading_level": null,
+      "page_id": 15,
+      "polygon": [
+        [
+          54.419921875,
+          35.357421875
+        ],
+        [
+          210.986328125,
+          35.357421875
+        ],
+        [
+          210.986328125,
+          56.736328125
+        ],
+        [
+          54.419921875,
+          56.736328125
+        ]
+      ]
+    },
+    {
+      "title": "Exempel",
+      "heading_level": null,
+      "page_id": 15,
+      "polygon": [
+        [
+          62.568359375,
+          148.4189453125
+        ],
+        [
+          126.85642317380352,
+          146.7744140625
+        ],
+        [
+          126.85642317380352,
+          162.70169189670526
+        ],
+        [
+          61.404296875,
+          164.0419921875
+        ]
+      ]
+    },
+    {
+      "title": "Svar:",
+      "heading_level": null,
+      "page_id": 15,
+      "polygon": [
+        [
+          71.30982367758186,
+          217.900390625
+        ],
+        [
+          98.33249370277078,
+          216.255859375
+        ],
+        [
+          98.33249370277078,
+          228.6821015138023
+        ],
+        [
+          71.30982367758186,
+          229.412109375
+        ]
+      ]
+    },
+    {
+      "title": "R\u00e4kna med tal i potensform",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          52.3828125,
+          37.82421875
+        ],
+        [
+          310.8046875,
+          36.1796875
+        ],
+        [
+          310.7607052896725,
+          57.73285841495993
+        ],
+        [
+          51.21875,
+          59.203125
+        ]
+      ]
+    },
+    {
+      "title": "Tal i kvadrat",
+      "heading_level": null,
+      "page_id": 17,
+      "polygon": [
+        [
+          56.45703125,
+          35.357421875
+        ],
+        [
+          177.14861460957178,
+          33.712890625
+        ],
+        [
+          177.14861460957178,
+          52.48441674087266
+        ],
+        [
+          56.45703125,
+          53.447265625
+        ]
+      ]
+    },
+    {
+      "title": "Kvadratrot",
+      "heading_level": null,
+      "page_id": 18,
+      "polygon": [
+        [
+          48.890625,
+          38.2353515625
+        ],
+        [
+          155.38035264483625,
+          38.2353515625
+        ],
+        [
+          155.38035264483625,
+          55.5029296875
+        ],
+        [
+          48.890625,
+          55.5029296875
+        ]
+      ]
+    },
+    {
+      "title": "> Exempel",
+      "heading_level": null,
+      "page_id": 18,
+      "polygon": [
+        [
+          55.54659949622166,
+          193.6435546875
+        ],
+        [
+          120.8513853904282,
+          191.9990234375
+        ],
+        [
+          120.8513853904282,
+          208.4381121994657
+        ],
+        [
+          55.54659949622166,
+          209.2666015625
+        ]
+      ]
+    },
+    {
+      "title": "Svar:",
+      "heading_level": null,
+      "page_id": 18,
+      "polygon": [
+        [
+          66.05541561712846,
+          243.390625
+        ],
+        [
+          93.07808564231738,
+          241.74609375
+        ],
+        [
+          93.07808564231738,
+          254.17453250222616
+        ],
+        [
+          64.896484375,
+          254.90234375
+        ]
+      ]
+    },
+    {
+      "title": "Talm\u00e4ngder",
+      "heading_level": null,
+      "page_id": 19,
+      "polygon": [
+        [
+          57.62109375,
+          35.7685546875
+        ],
+        [
+          177.8992443324937,
+          35.7685546875
+        ],
+        [
+          177.8992443324937,
+          57.9697265625
+        ],
+        [
+          57.62109375,
+          57.9697265625
+        ]
+      ]
+    },
+    {
+      "title": "H Pythagoras",
+      "heading_level": null,
+      "page_id": 20,
+      "polygon": [
+        [
+          196.66498740554155,
+          491.8539626001781
+        ],
+        [
+          284.4886649874055,
+          491.8539626001781
+        ],
+        [
+          284.4886649874055,
+          507.7490234375
+        ],
+        [
+          196.66498740554155,
+          509.3935546875
+        ]
+      ]
+    },
+    {
+      "title": "ABC | Begrepp och resonemang",
+      "heading_level": null,
+      "page_id": 21,
+      "polygon": [
+        [
+          44.287153652392945,
+          47.98575244879786
+        ],
+        [
+          235.6977329974811,
+          46.4580078125
+        ],
+        [
+          235.6977329974811,
+          62.981300089047195
+        ],
+        [
+          44.287153652392945,
+          63.7255859375
+        ]
+      ]
+    },
+    {
+      "title": "Resonemang",
+      "heading_level": null,
+      "page_id": 21,
+      "polygon": [
+        [
+          61.551637279596974,
+          321.0947265625
+        ],
+        [
+          140.36775818639796,
+          319.4501953125
+        ],
+        [
+          140.36775818639796,
+          333.4287109375
+        ],
+        [
+          61.551637279596974,
+          335.0732421875
+        ]
+      ]
+    },
+    {
+      "title": "Begreppskarta",
+      "heading_level": null,
+      "page_id": 21,
+      "polygon": [
+        [
+          62.859375,
+          520.9052734375
+        ],
+        [
+          151.6272040302267,
+          519.2607421875
+        ],
+        [
+          151.6272040302267,
+          534.8837890625
+        ],
+        [
+          61.6953125,
+          536.5283203125
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 6,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          50
+        ],
+        [
+          "Span",
+          22
+        ],
+        [
+          "ListItem",
+          6
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          41
+        ],
+        [
+          "Span",
+          20
+        ],
+        [
+          "TableCell",
+          20
+        ],
+        [
+          "ListItem",
+          10
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "Picture",
+          3
+        ],
+        [
+          "ListGroup",
+          3
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          67
+        ],
+        [
+          "Span",
+          43
+        ],
+        [
+          "TableCell",
+          24
+        ],
+        [
+          "ListItem",
+          22
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "ListGroup",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Picture",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "Table",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          64
+        ],
+        [
+          "Span",
+          42
+        ],
+        [
+          "TableCell",
+          36
+        ],
+        [
+          "ListItem",
+          24
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "Picture",
+          2
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Equation",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          87
+        ],
+        [
+          "Span",
+          58
+        ],
+        [
+          "ListItem",
+          29
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "ListGroup",
+          5
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          53
+        ],
+        [
+          "Equation",
+          31
+        ],
+        [
+          "Span",
+          27
+        ],
+        [
+          "Text",
+          13
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          64
+        ],
+        [
+          "Line",
+          52
+        ],
+        [
+          "ListItem",
+          16
+        ],
+        [
+          "Equation",
+          13
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "ListGroup",
+          4
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 13,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          38
+        ],
+        [
+          "TableCell",
+          30
+        ],
+        [
+          "Span",
+          21
+        ],
+        [
+          "Equation",
+          17
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "Picture",
+          3
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Table",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 14,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          99
+        ],
+        [
+          "Span",
+          61
+        ],
+        [
+          "ListItem",
+          41
+        ],
+        [
+          "ListGroup",
+          8
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 15,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          104
+        ],
+        [
+          "Line",
+          62
+        ],
+        [
+          "ListItem",
+          40
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "ListGroup",
+          9
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 16,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          43
+        ],
+        [
+          "Equation",
+          34
+        ],
+        [
+          "Span",
+          29
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Picture",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 17,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          109
+        ],
+        [
+          "Span",
+          70
+        ],
+        [
+          "ListItem",
+          26
+        ],
+        [
+          "Equation",
+          10
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "ListGroup",
+          8
+        ],
+        [
+          "Picture",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 18,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          100
+        ],
+        [
+          "Span",
+          69
+        ],
+        [
+          "ListItem",
+          20
+        ],
+        [
+          "Text",
+          18
+        ],
+        [
+          "Picture",
+          4
+        ],
+        [
+          "ListGroup",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 19,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          47
+        ],
+        [
+          "Line",
+          35
+        ],
+        [
+          "ListItem",
+          12
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Figure",
+          6
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Picture",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 20,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          30
+        ],
+        [
+          "TableCell",
+          28
+        ],
+        [
+          "Line",
+          27
+        ],
+        [
+          "ListItem",
+          19
+        ],
+        [
+          "Picture",
+          3
+        ],
+        [
+          "ListGroup",
+          3
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 21,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          50
+        ],
+        [
+          "Line",
+          38
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "Picture",
+          7
+        ],
+        [
+          "Caption",
+          5
+        ],
+        [
+          "Equation",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PictureGroup",
+          3
+        ],
+        [
+          "PageFooter",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data\\Matte Direkt \u00c5k 9 (Nya)"
+}

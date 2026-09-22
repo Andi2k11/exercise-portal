@@ -1,0 +1,147 @@
+[
+  {
+    "schemaVersion": "1",
+    "id": "ch1_stora_001",
+    "title": "Räkna till en miljon",
+    "path": "data/exercises/stora-tal/rakna-till-en-miljon.json",
+    "generator": "countSecondsToNumber",
+    "answerType": "problem-solving",
+    "displayText": "Tänk dig att du räknar från talet ett och räknar ett heltal varje sekund. Hur lång tid tar det att räkna till en miljon? Ange svaret i lämpliga enheter (dagar, veckor eller månader).",
+    "latex": null,
+    "params": {
+      "target": 1000000,
+      "rate_per_second": 1
+    },
+    "difficulty": 2,
+    "learningObjectives": ["Skatta storlekar","Konvertera sekunder till större tidsenheter"],
+    "hints": ["Räkna antalet sekunder till minuter, timmar och sedan till dagar.","1 dag = 24 timmar, 1 timme = 3600 sekunder."],
+    "sampleSolution": "1 000 000 sekunder ≈ 11,57 dagar (1 000 000 / 86 400 ≈ 11,57).",
+    "allowPartial": false,
+    "tags": ["storleksordning","enheter","tid"],
+    "provenance": { "source": "Kapitel Stora tal", "page": 7, "media": ["_page_6_Picture_0.jpeg"] }
+  },
+  {
+    "schemaVersion": "1",
+    "id": "ch1_stora_002",
+    "title": "Har du levt i en miljard sekunder?",
+    "path": "data/exercises/stora-tal/levt-i-en-miljard-sekunder.json",
+    "generator": "secondsToYearsCompare",
+    "answerType": "number",
+    "displayText": "En miljard sekunder — ungefär hur många år är det? (avrunda till heltal antal år)",
+    "latex": null,
+    "params": {
+      "seconds": 1000000000,
+      "seconds_per_year": 31557600
+    },
+    "difficulty": 2,
+    "learningObjectives": ["Konvertera mellan sekunder och år","Förstå storleksordning för stora tal"],
+    "hints": ["Använd ungefärligt värde: 1 år ≈ 31 557 600 sekunder (365,25 dagar).","Dela antalet sekunder med sekunder per år."],
+    "sampleSolution": "1 000 000 000 / 31 557 600 ≈ 31,7 år → cirka 32 år.",
+    "tolerance": 1,
+    "toleranceType": "absolute",
+    "allowPartial": false,
+    "tags": ["storleksordning","tid"],
+    "provenance": { "source": "Kapitel Stora tal", "page": 7 }
+  },
+  {
+    "schemaVersion": "1",
+    "id": "ch1_stora_003",
+    "title": "Riskorn på schackbrädet - antal på en ruta",
+    "path": "data/exercises/stora-tal/riskorn-pa-ruta.json",
+    "generator": "powerOfTwoAtSquare",
+    "answerType": "number",
+    "displayText": "På ett schackbräde dubblas antalet riskorn för varje ruta. Hur många riskorn finns det på den åttonde rutan?",
+    "latex": "$2^{7}$",
+    "params": { "square_index": 8 },
+    "difficulty": 2,
+    "learningObjectives": ["Förstå potenser av två","Tolka exponentiell tillväxt"],
+    "hints": ["Första rutan = $2^{0}$ riskorn (1).","På n:te rutan = $2^{n-1}$ riskorn."],
+    "sampleSolution": "På 8:e rutan: $2^{7} = 128$ riskorn.",
+    "allowPartial": false,
+    "tags": ["potenser","exponentiell"],
+    "provenance": { "source": "Kapitel Stora tal - Sissas berättelse", "page": 7 }
+  },
+  {
+    "schemaVersion": "1",
+    "id": "ch1_stora_004",
+    "title": "Riskorn på schackbrädet - total mängd",
+    "path": "data/exercises/stora-tal/riskorn-total.json",
+    "generator": "totalGrainsOnBoard",
+    "answerType": "number",
+    "displayText": "Om antalet riskorn fördubblas för varje ruta och det finns 64 rutor, hur många riskorn skulle finnas totalt på hela brädet? Skriv svaret i plain siffror (utan prefix).",
+    "latex": "\\sum_{k=0}^{63}2^{k} = 2^{64}-1",
+    "params": { "squares": 64 },
+    "difficulty": 3,
+    "learningObjectives": ["Summera geometrisk serie","Förstå stora tal"],
+    "hints": ["Summan av 1+2+4+...+2^{63} = 2^{64}-1.","Använd uttrycket för geometrisk serie eller potenser."],
+    "sampleSolution": "Totalt = $2^{64}-1 \\approx 18\\ 446\\ 744\\ 073\\ 709\\ 551$.",
+    "allowPartial": false,
+    "tags": ["geometrisk serie","potenser"],
+    "provenance": { "source": "Kapitel Stora tal - Sissas berättelse", "page": 7 }
+  },
+  {
+    "schemaVersion": "1",
+    "id": "ch1_stora_005",
+    "title": "Jämförelse: miljard vs miljon",
+    "path": "data/exercises/stora-tal/jamfor-miljard-miljon.json",
+    "generator": "ratioBetweenPowersOfTen",
+    "answerType": "number",
+    "displayText": "Hur många gånger större är en miljard jämfört med en miljon?",
+    "latex": null,
+    "params": { "larger": 1000000000, "smaller": 1000000 },
+    "difficulty": 1,
+    "learningObjectives": ["Förstå tusen-, miljon- och miljard-ordningarna","Division av stora tal"],
+    "hints": ["Dividera 1 000 000 000 med 1 000 000.","Använd tusen som referensenhet."],
+    "sampleSolution": "1 000 000 000 / 1 000 000 = 1 000 → en miljard är 1 000 gånger större än en miljon.",
+    "allowPartial": false,
+    "tags": ["storleksordning","jämförelse"],
+    "provenance": { "source": "Kapitel Stora tal", "page": 7, "media": ["_page_7_Picture_6.jpeg"] }
+  },
+  {
+    "schemaVersion": "1",
+    "id": "ch1_stora_006",
+    "title": "Skriv talen med siffror",
+    "path": "data/exercises/stora-tal/skriv-talen-med-siffror.json",
+    "generator": "writeWordsAsDigits",
+    "answerType": "multipleChoice",
+    "displayText": "Skriv talen med siffror: a) Tre miljarder fyrahundrafem miljoner.  b) En biljon nio miljarder trettiofemtusen.",
+    "latex": null,
+    "params": {
+      "items": [
+        { "text": "Tre miljarder fyrahundrafem miljoner", "answer": 3004005000 },
+        { "text": "En biljon nio miljarder trettiofemtusen", "answer": 1009000035000 }
+      ],
+      "optionsPerItem": 4
+    },
+    "difficulty": 2,
+    "learningObjectives": ["Omvandla textform till sifferform för stora tal","Känna igen placeringar för miljoner/miljarder/biljoner"],
+    "hints": ["Gruppera siffrorna i tre per grupp från höger.","Tänk: tusen, miljon, miljard, biljon."],
+    "sampleSolution": "a) 3 004 005 000  b) 1 009 000 035 000",
+    "allowPartial": true,
+    "tags": ["notation","stora tal"],
+    "provenance": { "source": "Kapitel Stora tal", "page": 7 }
+  },
+  {
+    "schemaVersion": "1",
+    "id": "ch1_stora_007",
+    "title": "Amerikanska namn på stora tal",
+    "path": "data/exercises/stora-tal/amerikanska-namn.json",
+    "generator": "convertSwedishToAmericanLargeNumber",
+    "answerType": "multipleChoice",
+    "displayText": "I USA kallas vissa stora tal annorlunda. a) Hur många \"billions\" (amerikanskt) går det på en biljon (svensk)? b) Hur många \"millions\" går det på en biljon (svensk)? Välj rätt alternativ för varje fråga.",
+    "latex": null,
+    "params": {
+      "questions": [
+        { "q": "Hur många US billions i en svensk biljon?", "correct": 1000, "options": [100, 1000, 10000, 1000000] },
+        { "q": "Hur många US millions i en svensk biljon?", "correct": 1000000, "options": [100000, 1000000, 10000000, 1000000000] }
+      ]
+    },
+    "difficulty": 2,
+    "learningObjectives": ["Förstå internationella namn på stora tal","Omvandla mellan olika benämningssystem"],
+    "hints": ["1 biljon (sv) = 10^12. I USA är \"billion\" = 10^9.","Räkna hur många 10^9 som ryms i 10^12."],
+    "sampleSolution": "a) 1 000  b) 1 000 000",
+    "allowPartial": false,
+    "tags": ["storleksordning","internationellt"],
+    "provenance": { "source": "Kapitel Stora tal", "page": 7 }
+  }
+]

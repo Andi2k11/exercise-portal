@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_tiop_001",
+  "title": "Skriv produkterna som tiopotens",
+  "path": "data/exercises/tiopotenser/skriv-produkter-tiopotens.json",
+  "generator": "multiplyTenPowers",
+  "answerType": "multipleChoice",
+  "displayText": "Skriv produkterna som en tiopotens: a) 10·10  b) 10·10·10·10·10·10  c) 10·10·10·10·10·10·10",
+  "params": { "items": [ { "expr": "10*10", "answer": "10^2" }, { "expr": "10*10*10*10*10*10", "answer": "10^6" }, { "expr": "10*10*10*10*10*10*10", "answer": "10^7" } ] },
+  "difficulty": 1,
+  "learningObjectives": ["Förstå tiopotenser","Kunna skriva produkt som potens"],
+  "hints": ["Räkna antal faktorer 10 och skriv som 10^n"],
+  "sampleSolution": "a) 10^2  b) 10^6  c) 10^7",
+  "tags": ["tiopotenser","potenser"],
+  "provenance": { "source": "Tiopotenser", "page": 9, "media": ["_page_9_Picture_1.jpeg"] }
+}

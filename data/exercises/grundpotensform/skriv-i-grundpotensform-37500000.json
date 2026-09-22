@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_grundpot_002",
+  "title": "Skriv i grundpotensform: 37 500 000",
+  "path": "data/exercises/grundpotensform/skriv-i-grundpotensform-37500000.json",
+  "generator": "toScientificNotation",
+  "answerType": "number",
+  "displayText": "Skriv talet 37 500 000 i grundpotensform.",
+  "params": { "value": 37500000 },
+  "difficulty": 1,
+  "learningObjectives": ["Skriva tal i grundpotensform"],
+  "hints": ["3,75 · 10^7 är rätt form."],
+  "sampleSolution": "3,75 · 10^7",
+  "tags": ["grundpotensform"],
+  "provenance": { "source": "Stora tal i grundpotensform", "page": 10 }
+}

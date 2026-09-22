@@ -15,6 +15,26 @@ import numberline from '../answer-types/numberline.js';
 import digitPlaceInt from './digitPlaceInt.js';
 import digitPlaceDec from './digitPlaceDec.js';
 import digitPlaceMixed from './digitPlaceMixed.js';
+import countSecondsToNumber from './wrappers/countSecondsToNumber.js';
+import secondsToYearsCompare from './wrappers/secondsToYearsCompare.js';
+import powerOfTwoAtSquare from './wrappers/powerOfTwoAtSquare.js';
+import totalGrainsOnBoard from './wrappers/totalGrainsOnBoard.js';
+import ratioBetweenPowersOfTen from './wrappers/ratioBetweenPowersOfTen.js';
+import writeWordsAsDigits from './wrappers/writeWordsAsDigits.js';
+import convertSwedishToAmericanLargeNumber from './wrappers/convertSwedishToAmericanLargeNumber.js';
+import removePrefixBytes from './wrappers/removePrefixBytes.js';
+import powerPrefixToWatts from './wrappers/powerPrefixToWatts.js';
+import chooseAppropriatePrefix from './wrappers/chooseAppropriatePrefix.js';
+import multiplyTenPowers from './wrappers/multiplyTenPowers.js';
+import tenPowerToNumber from './wrappers/tenPowerToNumber.js';
+import numberToTenPower from './wrappers/numberToTenPower.js';
+import computeTenPowerMultiplication from './wrappers/computeTenPowerMultiplication.js';
+import toScientificNotation from './wrappers/toScientificNotation.js';
+import scientificToNumber from './wrappers/scientificToNumber.js';
+import identifyScientificNotationItems from './wrappers/identifyScientificNotationItems.js';
+import multiplyScientificNotation from './wrappers/multiplyScientificNotation.js';
+import divideScientificNotation from './wrappers/divideScientificNotation.js';
+import solveForCoefficientOrExponent from './wrappers/solveForCoefficientOrExponent.js';
 
 const registry = new Map();
 registry.set('multiplyByPowersOf10', multGen);
@@ -34,6 +54,27 @@ registry.set('numberline', numberline);
 registry.set('digitPlaceInt', digitPlaceInt);
 registry.set('digitPlaceDec', digitPlaceDec);
 registry.set('digitPlaceMixed', digitPlaceMixed);
+
+registry.set('countSecondsToNumber', countSecondsToNumber);
+registry.set('secondsToYearsCompare', secondsToYearsCompare);
+registry.set('powerOfTwoAtSquare', powerOfTwoAtSquare);
+registry.set('totalGrainsOnBoard', totalGrainsOnBoard);
+registry.set('ratioBetweenPowersOfTen', ratioBetweenPowersOfTen);
+registry.set('writeWordsAsDigits', writeWordsAsDigits);
+registry.set('convertSwedishToAmericanLargeNumber', convertSwedishToAmericanLargeNumber);
+registry.set('removePrefixBytes', removePrefixBytes);
+registry.set('powerPrefixToWatts', powerPrefixToWatts);
+registry.set('chooseAppropriatePrefix', chooseAppropriatePrefix);
+registry.set('multiplyTenPowers', multiplyTenPowers);
+registry.set('tenPowerToNumber', tenPowerToNumber);
+registry.set('numberToTenPower', numberToTenPower);
+registry.set('computeTenPowerMultiplication', computeTenPowerMultiplication);
+registry.set('toScientificNotation', toScientificNotation);
+registry.set('scientificToNumber', scientificToNumber);
+registry.set('identifyScientificNotationItems', identifyScientificNotationItems);
+registry.set('multiplyScientificNotation', multiplyScientificNotation);
+registry.set('divideScientificNotation', divideScientificNotation);
+registry.set('solveForCoefficientOrExponent', solveForCoefficientOrExponent);
 
 // Problem solving subtypes (Matte Direkt 7 Kap 1)
 const withRng = (fn) => (opts, rng) => {

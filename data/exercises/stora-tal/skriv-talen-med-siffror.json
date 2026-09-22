@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1",
+  "id": "ch1_stora_006",
+  "title": "Skriv talen med siffror",
+  "path": "data/exercises/stora-tal/skriv-talen-med-siffror.json",
+  "generator": "writeWordsAsDigits",
+  "answerType": "multipleChoice",
+  "displayText": "Skriv talen med siffror: a) Tre miljarder fyrahundrafem miljoner.  b) En biljon nio miljarder trettiofemtusen.",
+  "latex": null,
+  "params": {
+    "items": [
+      { "text": "Tre miljarder fyrahundrafem miljoner", "answer": 3004005000 },
+      { "text": "En biljon nio miljarder trettiofemtusen", "answer": 1009000035000 }
+    ],
+    "optionsPerItem": 4
+  },
+  "difficulty": 2,
+  "learningObjectives": ["Omvandla textform till sifferform för stora tal","Känna igen placeringar för miljoner/miljarder/biljoner"],
+  "hints": ["Gruppera siffrorna i tre per grupp från höger.","Tänk: tusen, miljon, miljard, biljon."],
+  "sampleSolution": "a) 3 004 005 000  b) 1 009 000 035 000",
+  "allowPartial": true,
+  "tags": ["notation","stora tal"],
+  "provenance": { "source": "Kapitel Stora tal", "page": 7 }
+}
