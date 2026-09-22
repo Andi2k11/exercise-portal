@@ -12,6 +12,7 @@ import divisibility from './divisibility.js';
 import { makeRng } from '../core/rng.js';
 import numberlinePoint from './numberlinePoint.js';
 import numberline from '../answer-types/numberline.js';
+import numberWithUnit from '../answer-types/number-with-unit.js';
 import digitPlaceInt from './digitPlaceInt.js';
 import digitPlaceDec from './digitPlaceDec.js';
 import digitPlaceMixed from './digitPlaceMixed.js';
@@ -36,6 +37,8 @@ registry.set('numberline', numberline);
 registry.set('digitPlaceInt', digitPlaceInt);
 registry.set('digitPlaceDec', digitPlaceDec);
 registry.set('digitPlaceMixed', digitPlaceMixed);
+// register new answer-type alias
+registry.set('number-with-unit', numberWithUnit);
 // Helper: ensure generate returns an array of items
 const wrap = (mod) => ({ generate: (opts, rng) => {
   try {

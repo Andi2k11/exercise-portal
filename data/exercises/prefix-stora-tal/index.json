@@ -3,7 +3,8 @@
     "id": "prefix-stora-tal-001",
     "title": "Prefix: Stora tal — skriv om med prefix",
     "generator": "prefixStoraTal",
-    "displayText": "Skriv om talet med lämpligt prefix och enhet. Använd decimal komma.",
+    "answerType": "number-with-unit",
+    "displayText": "Skriv om talet med lämpligt prefix och enhet.",
     "params": { "count": 10 }
   }
 ]
