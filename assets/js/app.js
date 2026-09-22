@@ -331,6 +331,39 @@ function buildPad(container) {
         }
         return;
       }
+      // If this exercise uses number-with-unit, populate prefix buttons
+      try {
+        if (ex && ex.answerType === 'number-with-unit') {
+          const inputArea = document.getElementById('input-area');
+          // the answer-type mount should have created an input with id 'value-field'
+          // and exposed a `setPrefixes` method via the instance stored on registry.
+          // We locate the mounted instance by checking registry export — fallback: call a global helper.
+          try {
+            // If the mounted instance setPrefixes is available on window, call it
+            if (window.currentAnswerTypeInstance && typeof window.currentAnswerTypeInstance.setPrefixes === 'function') {
+              // determine allowed prefixes for this unit
+              const unit = first.b || '';
+              const allowed = ['h','k','M','G','T'].map(p => p);
+              window.currentAnswerTypeInstance.setPrefixes(allowed, unit);
+            } else {
+              // fallback: try to find input area and append buttons directly
+              const inp = document.getElementById('value-field');
+              const container = document.querySelector('.nwu-prefix-container') || (inputArea && inputArea.querySelector('.nwu-prefix-container'));
+              if (container) {
+                container.innerHTML = '';
+                const unit = first.b || '';
+                ['h','k','M','G','T'].forEach(p => {
+                  const btn = document.createElement('button'); btn.type='button'; btn.className='btn btn-outline-secondary nwu-prefix'; btn.style.marginRight='8px'; btn.textContent = p + unit;
+                  btn.addEventListener('click', () => {
+                    let val = inp.value.trim(); val = val.replace(/\s+[A-Za-z]+$/, '').trim(); inp.value = val + ' ' + (p + unit); inp.focus();
+                  });
+                  container.appendChild(btn);
+                });
+              }
+            }
+          } catch (e) { console.warn('Failed to populate prefix buttons', e); }
+        }
+      } catch (e) {}
       // Render a simple numberline SVG for numberlinePoint generator
       if (ex && ex.generator === 'numberlinePoint') {
         // clear existing content
