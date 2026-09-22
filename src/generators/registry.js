@@ -15,26 +15,7 @@ import numberline from '../answer-types/numberline.js';
 import digitPlaceInt from './digitPlaceInt.js';
 import digitPlaceDec from './digitPlaceDec.js';
 import digitPlaceMixed from './digitPlaceMixed.js';
-import countSecondsToNumber from './wrappers/countSecondsToNumber.js';
-import secondsToYearsCompare from './wrappers/secondsToYearsCompare.js';
-import powerOfTwoAtSquare from './wrappers/powerOfTwoAtSquare.js';
-import totalGrainsOnBoard from './wrappers/totalGrainsOnBoard.js';
-import ratioBetweenPowersOfTen from './wrappers/ratioBetweenPowersOfTen.js';
-import writeWordsAsDigits from './wrappers/writeWordsAsDigits.js';
-import convertSwedishToAmericanLargeNumber from './wrappers/convertSwedishToAmericanLargeNumber.js';
-import removePrefixBytes from './wrappers/removePrefixBytes.js';
-import powerPrefixToWatts from './wrappers/powerPrefixToWatts.js';
-import chooseAppropriatePrefix from './wrappers/chooseAppropriatePrefix.js';
-import multiplyTenPowers from './wrappers/multiplyTenPowers.js';
-import tenPowerToNumber from './wrappers/tenPowerToNumber.js';
-import numberToTenPower from './wrappers/numberToTenPower.js';
-import computeTenPowerMultiplication from './wrappers/computeTenPowerMultiplication.js';
-import toScientificNotation from './wrappers/toScientificNotation.js';
-import scientificToNumber from './wrappers/scientificToNumber.js';
-import identifyScientificNotationItems from './wrappers/identifyScientificNotationItems.js';
-import multiplyScientificNotation from './wrappers/multiplyScientificNotation.js';
-import divideScientificNotation from './wrappers/divideScientificNotation.js';
-import solveForCoefficientOrExponent from './wrappers/solveForCoefficientOrExponent.js';
+// Archived generator wrappers and problem-solving modules removed from imports
 
 const registry = new Map();
 registry.set('multiplyByPowersOf10', multGen);
@@ -70,26 +51,7 @@ const wrap = (mod) => ({ generate: (opts, rng) => {
   } catch (e) { console.error('Generator wrapper error', e); return []; }
 }});
 
-registry.set('countSecondsToNumber', wrap(countSecondsToNumber));
-registry.set('secondsToYearsCompare', wrap(secondsToYearsCompare));
-registry.set('powerOfTwoAtSquare', wrap(powerOfTwoAtSquare));
-registry.set('totalGrainsOnBoard', wrap(totalGrainsOnBoard));
-registry.set('ratioBetweenPowersOfTen', wrap(ratioBetweenPowersOfTen));
-registry.set('writeWordsAsDigits', wrap(writeWordsAsDigits));
-registry.set('convertSwedishToAmericanLargeNumber', wrap(convertSwedishToAmericanLargeNumber));
-registry.set('removePrefixBytes', removePrefixBytes);
-registry.set('powerPrefixToWatts', powerPrefixToWatts);
-registry.set('chooseAppropriatePrefix', chooseAppropriatePrefix);
-registry.set('multiplyTenPowers', multiplyTenPowers);
-registry.set('tenPowerToNumber', tenPowerToNumber);
-registry.set('numberToTenPower', numberToTenPower);
-registry.set('computeTenPowerMultiplication', computeTenPowerMultiplication);
-registry.set('toScientificNotation', toScientificNotation);
-registry.set('scientificToNumber', scientificToNumber);
-registry.set('identifyScientificNotationItems', identifyScientificNotationItems);
-registry.set('multiplyScientificNotation', multiplyScientificNotation);
-registry.set('divideScientificNotation', divideScientificNotation);
-registry.set('solveForCoefficientOrExponent', solveForCoefficientOrExponent);
+// Archived modules are intentionally not registered here.
 
 // Problem solving subtypes (Matte Direkt 7 Kap 1)
 const withRng = (fn) => (opts, rng) => {
@@ -103,10 +65,7 @@ const withRng = (fn) => (opts, rng) => {
 
 registry.set('lcm', { generate: withRng((opts, rngFn) => psRegistry.generate('lcm', opts, rngFn)) });
 registry.set('roundingInterval', { generate: withRng((opts, rngFn) => psRegistry.generate('roundingInterval', opts, rngFn)) });
-registry.set('actualValue', { generate: withRng((opts, rngFn) => psRegistry.generate('actualValue', opts, rngFn)) });
-registry.set('capacity', { generate: withRng((opts, rngFn) => psRegistry.generate('capacity', opts, rngFn)) });
-registry.set('budget', { generate: withRng((opts, rngFn) => psRegistry.generate('budget', opts, rngFn)) });
-registry.set('reasoning', { generate: withRng((opts, rngFn) => psRegistry.generate('reasoning', opts, rngFn)) });
+// problem-solving generators `actualValue`, `capacity`, `budget`, `reasoning` were archived
 // Note: top-level problem-solving generator removed
 
 export function getGenerator(name) {

@@ -27,6 +27,17 @@ export async function initLoader() {
     const o = document.createElement('option'); o.value = b.id; o.textContent = b.title; bookSelect.appendChild(o);
   });
 
+  // Hide book options that have no exercises (e.g., hide "Matte Direkt 9" when empty)
+  // run after books are inserted
+  (function hideEmptyBooks() {
+    for (const opt of Array.from(bookSelect.options)) {
+      if (!opt.value) continue;
+      const book = books.find(b => b.id === opt.value);
+      const hasExercises = (book && (book.chapters || []).some(c => (c.exercises || []).length > 0));
+      if (!hasExercises) opt.style.display = 'none';
+    }
+  })();
+
   bookSelect.addEventListener('change', () => {
     const book = books.find(b => b.id === bookSelect.value);
     clearSelect(chapterSelect); clearSelect(exerciseSelect);
