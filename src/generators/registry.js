@@ -54,14 +54,21 @@ registry.set('numberline', numberline);
 registry.set('digitPlaceInt', digitPlaceInt);
 registry.set('digitPlaceDec', digitPlaceDec);
 registry.set('digitPlaceMixed', digitPlaceMixed);
+// Helper: ensure generate returns an array of items
+const wrap = (mod) => ({ generate: (opts, rng) => {
+  try {
+    const res = mod && typeof mod.generate === 'function' ? mod.generate(opts, rng) : null;
+    return Array.isArray(res) ? res : (res ? [res] : []);
+  } catch (e) { console.error('Generator wrapper error', e); return []; }
+}});
 
-registry.set('countSecondsToNumber', countSecondsToNumber);
-registry.set('secondsToYearsCompare', secondsToYearsCompare);
-registry.set('powerOfTwoAtSquare', powerOfTwoAtSquare);
-registry.set('totalGrainsOnBoard', totalGrainsOnBoard);
-registry.set('ratioBetweenPowersOfTen', ratioBetweenPowersOfTen);
-registry.set('writeWordsAsDigits', writeWordsAsDigits);
-registry.set('convertSwedishToAmericanLargeNumber', convertSwedishToAmericanLargeNumber);
+registry.set('countSecondsToNumber', wrap(countSecondsToNumber));
+registry.set('secondsToYearsCompare', wrap(secondsToYearsCompare));
+registry.set('powerOfTwoAtSquare', wrap(powerOfTwoAtSquare));
+registry.set('totalGrainsOnBoard', wrap(totalGrainsOnBoard));
+registry.set('ratioBetweenPowersOfTen', wrap(ratioBetweenPowersOfTen));
+registry.set('writeWordsAsDigits', wrap(writeWordsAsDigits));
+registry.set('convertSwedishToAmericanLargeNumber', wrap(convertSwedishToAmericanLargeNumber));
 registry.set('removePrefixBytes', removePrefixBytes);
 registry.set('powerPrefixToWatts', powerPrefixToWatts);
 registry.set('chooseAppropriatePrefix', chooseAppropriatePrefix);
