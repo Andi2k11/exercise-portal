@@ -41,9 +41,11 @@ export default {
       // store as item: provide original full-value and expected answer
       const fullValue = String(displayed.value).replace(/\./g,'');
       const answer = displayed.display.replace('.', ',');
+      // Provide fields `a` and `b` expected by loader display logic
       items.push({
         a: String(displayed.value),
-        unit: unit,
+        b: unit,
+        display: displayed.display,
         expected: answer,
         answer: answer
       });
