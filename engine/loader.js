@@ -156,6 +156,8 @@ export async function initLoader() {
         }
         // invoke app's renderer to initialise input area for the first item
         try { if (typeof window !== 'undefined' && typeof window.showCurrentItem === 'function') window.showCurrentItem(ex); } catch (e) {}
+        // Debug: log loaded exercise and first item to help trace rendering issues
+        try { console.debug('loader-debug: ex=', ex, 'first=', first, 'expr=', expr); } catch (e) {}
       } else {
         qEl.textContent = ex.task || '';
         tEl.textContent = ex.question || '';
