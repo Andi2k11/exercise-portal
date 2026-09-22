@@ -152,7 +152,8 @@ export async function initLoader() {
             // generator provided a ready-to-show display string (e.g. "15,0 MHz")
             expr = first.display;
           } else {
-            expr = `$${first.a} \times ${first.b}$`;
+            // prefer plain text like "62500 B" instead of a math \times expression
+            expr = `${first.a} ${first.b || ''}`.trim();
           }
         // For problem-solving show only the normalized task in the question area
         // Use `displayText` as a fallback when `task` isn't provided in the JSON.
