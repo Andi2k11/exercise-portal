@@ -271,9 +271,9 @@ function buildPad(container) {
     const isDiv = ex && ex.generator && String(ex.generator).toLowerCase().includes('div');
     const hasRound = first && typeof first.roundUnit !== 'undefined';
     const hasOp = first && typeof first.op === 'string';
-    if (isDiv) {
-      tEl.textContent = `$\\frac{${first.a}}{${first.b}}$`;
-    } else {
+      if (isDiv) {
+        tEl.textContent = `$\\frac{${first.a}}{${first.b}}$`;
+      } else {
       // multipleChoice answer type: render choices as buttons and handle selection
       if (ex && ex.answerType === 'multipleChoice') {
         tEl.textContent = first.template || ex.question || '';
