@@ -35,7 +35,9 @@
           {
             "id": "ch1",
             "title": "Kapitel 1",
-            "exercises": []
+            "exercises": [
+              { "id": "prefix-stora-tal", "title": "Prefix och stora tal (Kap 1)", "path": "data/exercises/prefix-stora-tal/index.json" }
+            ]
           }
         ]
       }
