@@ -1,3 +1,5 @@
+import { formatDecimal } from "../../core/numbers.js";
+
 const PREFIXES = [
   { sym: 'T', name: 'tera', scale: 1e12 },
   { sym: 'G', name: 'giga', scale: 1e9 },
@@ -24,7 +26,7 @@ export default {
     const items = [];
     // ensure rng is a function
     const rnd = (typeof rng === 'function') ? rng : (() => Math.random());
-    for (let i=0;i<count;i++) {
+    for (let i=0; i<count; i++) {
       // pick a target prefix (larger scales first so we get meaningful prefixes)
       const p = PREFIXES[randInt(rnd, 0, PREFIXES.length-1)];
       // allow exercise to restrict units via opts.units
@@ -59,11 +61,13 @@ export default {
       // store as item: provide original full-value and expected answer
       const fullValue = String(displayed.value).replace(/\./g,'');
       const answer = displayed.display.replace('.', ',');
+      // Make display plain text (Swedish decimal comma), no LaTeX: show base value + unit
+      const displayPlain = `${formatDecimal(String(displayed.value))} ${unit}`;
       // Provide fields `a` and `b` expected by loader display logic
       items.push({
         a: String(displayed.value),
         b: unit,
-        display: displayed.display,
+        display: displayPlain,
         expected: answer,
         answer: answer
       });
