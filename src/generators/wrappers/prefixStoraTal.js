@@ -24,18 +24,22 @@ export default {
       // it yields either an integer or one decimal place
       // pick multiplier so that value/p.scale in range [1,999]
       const displayed = (() => {
-        // choose whether integer or one-decimal
+        // choose whether converted value (with prefix) is integer or one-decimal
         const wantDecimal = (rnd() < 0.5);
         if (wantDecimal) {
-          // produce value like 1.5 * scale, i.e., 1.5 -> 1 decimal
+          // produce displayed number like 1.5 .. 999.9 with one decimal
           const intPart = randInt(rnd, 1, 999);
-          const dec = randInt(rnd, 1, 9);
-          const val = (intPart + dec/10) * p.scale;
-          return { value: Math.round(val), display: `${intPart},${dec} ${p.sym}${unit}` };
+          const dec = randInt(rnd, 0, 9);
+          const displayedNumber = Number(`${intPart}.${dec}`);
+          const val = Math.round(displayedNumber * p.scale);
+          // format display with comma and single decimal (no trailing .0)
+          const decStr = String(dec);
+          return { value: val, display: `${intPart},${decStr} ${p.sym}${unit}` };
         } else {
-          const intPart = randInt(rnd, 1, 9999);
+          // integer displayed number
+          const intPart = randInt(rnd, 1, 999);
           const val = intPart * p.scale;
-          return { value: Math.round(val), display: `${intPart} ${p.sym}${unit}` };
+          return { value: val, display: `${intPart} ${p.sym}${unit}` };
         }
       })();
       // store as item: provide original full-value and expected answer
