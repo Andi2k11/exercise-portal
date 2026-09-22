@@ -8,7 +8,7 @@ import roundGen from './roundByDigits.js';
 import roundDec from './roundDecimalByDigits.js';
 import basicOps from './basicOps.js';
 import divisibility from './divisibility.js';
-import psRegistry from './problemSolving/registry.js';
+// problemSolving registry was archived; avoid importing missing module
 import { makeRng } from '../core/rng.js';
 import numberlinePoint from './numberlinePoint.js';
 import numberline from '../answer-types/numberline.js';
@@ -62,10 +62,9 @@ const withRng = (fn) => (opts, rng) => {
   }
   return fn(opts, rngFn);
 };
-
-registry.set('lcm', { generate: withRng((opts, rngFn) => psRegistry.generate('lcm', opts, rngFn)) });
-registry.set('roundingInterval', { generate: withRng((opts, rngFn) => psRegistry.generate('roundingInterval', opts, rngFn)) });
-// problem-solving generators `actualValue`, `capacity`, `budget`, `reasoning` were archived
+// The problem-solving registry was archived. Provide safe stub generators
+registry.set('lcm', { generate: (opts) => [] });
+registry.set('roundingInterval', { generate: (opts) => [] });
 // Note: top-level problem-solving generator removed
 
 export function getGenerator(name) {
