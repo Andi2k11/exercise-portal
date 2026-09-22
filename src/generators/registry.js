@@ -16,6 +16,7 @@ import digitPlaceInt from './digitPlaceInt.js';
 import digitPlaceDec from './digitPlaceDec.js';
 import digitPlaceMixed from './digitPlaceMixed.js';
 // Archived generator wrappers and problem-solving modules removed from imports
+import prefixStoraTal from './wrappers/prefixStoraTal.js';
 
 const registry = new Map();
 registry.set('multiplyByPowersOf10', multGen);
@@ -52,6 +53,9 @@ const wrap = (mod) => ({ generate: (opts, rng) => {
 }});
 
 // Archived modules are intentionally not registered here.
+
+// New generator for Matte Direkt 9 Kap 1: prefixStoraTal
+registry.set('prefixStoraTal', wrap(prefixStoraTal));
 
 // Problem solving subtypes (Matte Direkt 7 Kap 1)
 const withRng = (fn) => (opts, rng) => {
