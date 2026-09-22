@@ -237,6 +237,18 @@ function updateExerciseLinks(ex) {
   // previously had QR button here; removed per request
 }
 
+// Sanitize math text for KaTeX: inside math delimiters convert digit,digit -> digit{,}digit
+function prepareMathText(text) {
+  if (!text || typeof text !== 'string') return text;
+  return text.replace(/\$(.*?)\$/g, (m, inner) => {
+    const fixed = inner.replace(/(\d),(\d)/g, '$1{,}$2');
+    return `$${fixed}$`;
+  }).replace(/\$\$(.*?)\$\$/g, (m, inner) => {
+    const fixed = inner.replace(/(\d),(\d)/g, '$1{,}$2');
+    return `$$${fixed}$$`;
+  });
+}
+
 function downloadQrPng(targetUrl, filename) {
   try {
     // Use a public QR image API to generate a PNG. Size 300x300.
