@@ -96,6 +96,10 @@ export async function initLoader() {
         ex._genParams = Object.assign({}, params);
         window.currentExerciseData = ex;
           const first = items[0] || { a: '', b: '', answer: '' };
+          // If generator returned a single descriptive item in `a`, promote it to exercise task
+          if (!ex.task && first && typeof first.a === 'string' && first.a.length > 0 && first.a.includes(':')) {
+            ex.task = first.a;
+          }
           // choose display based on generator/item properties
           const isDiv = ex.generator && String(ex.generator).toLowerCase().includes('div');
           const hasRound = first && typeof first.roundUnit !== 'undefined';
