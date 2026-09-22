@@ -135,14 +135,16 @@ export async function initLoader() {
             expr = `$${first.a} \\times ${first.b}$`;
           }
         // For problem-solving show only the normalized task in the question area
+        // Use `displayText` as a fallback when `task` isn't provided in the JSON.
+        const taskText = ex.task || ex.displayText || ex.title || '';
         if (ex.generator === 'problem-solving') {
-          qEl.textContent = ex.task || '';
+          qEl.textContent = ex.task || ex.displayText || '';
           qEl.style.fontStyle = 'normal';
           qEl.style.fontWeight = '800';
           tEl.textContent = '';
           tEl.style.display = 'none';
         } else {
-          qEl.textContent = ex.task || '';
+          qEl.textContent = taskText;
           tEl.textContent = expr;
           tEl.style.display = '';
         }
