@@ -150,7 +150,9 @@ export async function initLoader() {
             expr = label;
           } else if (first && typeof first.display === 'string' && first.display.length > 0) {
             // generator provided a ready-to-show display string (e.g. "15,0 MHz")
+            // Use as plain text and mark exercise to skip KaTeX auto-render for this expression
             expr = first.display;
+            ex._noKatex = true;
           } else {
             // prefer plain text like "62500 B" instead of a math \times expression
             expr = `${first.a} ${first.b || ''}`.trim();
@@ -198,6 +200,8 @@ export async function initLoader() {
       if (ex.generator === 'problem-solving') return;
       if (window.katexAutoRenderLoaded && typeof renderMathInElement === 'function') {
         try {
+          // skip rendering if exercise flagged to avoid KaTeX on plain displays
+          if (ex._noKatex) return;
           renderMathInElement(qEl, { delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}] });
           renderMathInElement(tEl, { delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}] });
           qEl.classList.add('katex-rendered');
